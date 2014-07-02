@@ -1,0 +1,12 @@
+package edu.neumont.csc250;
+
+public class RandomNumGen {
+	
+	public static void main(String[] args) {
+		int i = (int) Math.random();
+		int j = (int) Math.random();
+		
+		System.out.println(i + " " + j);
+	}
+
+}

@@ -1,0 +1,92 @@
+package edu.neumont.csc250;
+
+import java.awt.Color;
+import java.io.IOException;
+import edu.neumont.ui.Picture;
+
+public class Steganog {
+
+	/**
+	 * Takes a clean image and changes the prime-indexed pixels to secretly
+	 * carry the message
+	 **/
+	public Picture embedIntoImage(Picture cleanImage, String message) 
+			throws IOException {
+
+		Picture dirtyImage = cleanImage;
+
+		// # AA RR GG BB
+		// 11111111 11111111 11111111 11111111 / 8 each hex pair
+
+		int totalPixles = dirtyImage.height() * dirtyImage.width();
+		
+		PrimeIterator it = new PrimeIterator(totalPixles);
+		
+		while(it.hasNext()){
+			int next = it.next();
+			int x = next % dirtyImage.width();
+			int y = 0;
+			if(x < next){
+				y++;
+			}
+			
+			int messageIndex = 0;
+			int currentCharacter = (int) message.charAt(messageIndex);
+			messageIndex++;
+			
+			String characterBinaryString = Integer.toBinaryString(currentCharacter);
+			
+			Color oldColor = dirtyImage.get(x, y);
+			
+			int aa = oldColor.getAlpha();
+			String alpha = Integer.toBinaryString(aa);
+			String alphaFront = alpha.substring(0, 6);
+			System.out.println(alpha + " " + alphaFront);
+			String a = characterBinaryString.substring(0, 2);
+			alphaFront += a;
+			
+			int rr = oldColor.getRed();
+			String red = Integer.toBinaryString(rr);
+			String redFront = red.substring(0, 6);
+			String r = characterBinaryString.substring(2, 4);
+			redFront += r;
+			
+			int gg = oldColor.getGreen();
+			String green = Integer.toBinaryString(gg);
+			String greenFront = green.substring(0, 6);
+			String g = characterBinaryString.substring(4, 6);
+			greenFront += g;
+			
+			int bb = oldColor.getBlue();
+			String blue = Integer.toBinaryString(bb);
+			String blueFront = blue.substring(0, 6);
+			String b = characterBinaryString.substring(6);
+			if(b.length() < 2)
+				blueFront += 0 + b;
+			else
+				blueFront += b;
+						
+			int alphaInt = Integer.parseInt(alphaFront);
+			int redInt = Integer.parseInt(redFront);
+			int blueInt = Integer.parseInt(greenFront);
+			int greenInt = Integer.parseInt(blueFront);
+			System.out.println(blueFront);
+			
+			Color color = new Color(alphaInt, redInt, greenInt, blueInt); // all integers
+			System.out.println(oldColor + ",   " + color);
+			dirtyImage.set(x, y, color);
+		}
+		
+		return dirtyImage;
+	}
+
+	/**
+	 * Retreives the embedded secret from the secret-carrying image
+	 */
+	public String retreiveFromImage(Picture imageWithSecretMessage)
+			throws IOException {
+
+		return null;
+	}
+
+}

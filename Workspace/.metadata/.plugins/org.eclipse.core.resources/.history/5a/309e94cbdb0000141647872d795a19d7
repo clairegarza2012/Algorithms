@@ -1,0 +1,14 @@
+package edu.neumont.csc250;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		PrimeIterator prime = new PrimeIterator(35);
+		
+		while(prime.hasNext()){
+			System.out.println(prime.next());
+		}
+	}
+
+}

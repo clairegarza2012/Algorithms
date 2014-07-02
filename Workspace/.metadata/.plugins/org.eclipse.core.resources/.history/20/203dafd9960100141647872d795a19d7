@@ -1,0 +1,33 @@
+package edu.neumont.csc250;
+
+import java.io.IOException;
+
+import edu.neumont.ui.Picture;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		Picture pic = new Picture("matrix.png");
+		
+		Steganog nog = new Steganog();
+		
+		Picture picWithMessage = null;
+		try {
+			picWithMessage = nog.embedIntoImage(pic, " ");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		String message = "";
+		
+		try {
+			message = nog.retreiveFromImage(picWithMessage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println(message);
+	}
+
+}
