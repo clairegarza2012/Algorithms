@@ -1,0 +1,41 @@
+package edu.neumont.csc250;
+
+public class StringMatching {
+
+	public static void main(String[] args) {
+
+		String text = "racecar";
+		String pattern = "car";
+		
+		int count = findPattern(text, pattern);
+		
+		System.out.println(count);
+	}
+
+	private static int findPattern(String text, String pattern) {
+		int count = 0;
+		
+		if(pattern.length() > text.length()) return 0;
+		
+		for(int i = 0; i < text.length(); i++){
+			char textChar = text.charAt(i);
+			char patternChar = pattern.charAt(0);
+			if(text.charAt(i) == pattern.charAt(0))
+			{				
+				int size = 1;
+				for (int k = 0; k < pattern.length(); k++){
+					textChar = text.charAt(i);
+					patternChar = pattern.charAt(k);
+					
+					if(text.charAt(i++) == pattern.charAt(k))
+						size++;
+				}
+				if(size == pattern.length())
+					count++;
+			}
+		}
+		
+		return count;
+	}
+
+}
