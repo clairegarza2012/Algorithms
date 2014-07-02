@@ -1,0 +1,23 @@
+package edu.neumont.csc250;
+
+public class Summation {
+
+	public static void main(String[] args){
+	
+		int sum = 0;
+		int n = 63;
+		int i = 1;
+		sum = doubled(i, n);
+		System.out.println(sum);
+	}
+
+	private static int doubled(int i, int n) {
+		int sum = 0;
+		for (int j = i; j <= n; j++ ){
+			i *= 2;
+			sum +=i;
+		}
+		return sum;
+	}
+	
+}
