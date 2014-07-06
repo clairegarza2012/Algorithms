@@ -1,0 +1,47 @@
+import static org.junit.Assert.*;
+
+import java.io.IOException;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import edu.neumont.csc250.Steganog;
+import edu.neumont.ui.Picture;
+
+public class SteganogTest {
+
+	private Steganog nog = new Steganog();
+	private Picture newPic;
+	
+	@Test
+	public void embedTest() {
+		Picture pic = new Picture("matrix.png");
+		Assert.assertNotNull(pic);
+		
+		try {
+			newPic = nog.embedIntoImage(pic, "a message");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		if (newPic == null)
+			System.out.println("newPic is nul");
+		Assert.assertNotNull(newPic);
+		
+	}
+	
+	@Test
+	public void retrieveTest(){
+		String message = "";
+
+		try {
+			message = nog.retreiveFromImage(newPic);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Assert.assertNotNull(message);
+		
+		System.out.println(message);
+	}
+
+}

@@ -42,10 +42,11 @@ public class PrimeIterator implements Iterator<Integer>{
 		}
 					
 		for (int i = 2; i <= Math.sqrt(max); i++){	
-			for (int j = i + i; j < max; j+=i){
+			for (int j = (int)Math.pow((double)i, 2d); j < max; j+=i){
 				if(nums.contains(j)){
 					int jIndex = nums.indexOf(j);
 					nums.remove(jIndex);
+					System.out.println("looping: " + j);
 				}
 			}
 		}

@@ -6,13 +6,13 @@ public class PrimeNumbers {
 
 	public static void main(String[] args) {
 
-		int max = 154;
+		int max = 300 * 300;
 
 		ArrayList<Integer> primes = findPrimes(max);
-		ArrayList<Integer> primes2 = findPrimesNoMod(max);
+		//ArrayList<Integer> primes2 = findPrimesNoMod(max);
 
 		print(primes);
-		print(primes2);
+		//print(primes2);
 	}
 
 	private static ArrayList<Integer> findPrimesNoMod(int max) {
@@ -25,7 +25,7 @@ public class PrimeNumbers {
 		}
 
 		for (int i = 2; i <= Math.sqrt(max); i++){	
-			for (int j = i + i; j < max; j+=i){
+			for (int j = (int)Math.pow((double)i, 2d); j < max; j+=i){
 				if(nums.contains(j)){
 					int jIndex = nums.indexOf(j);
 					nums.remove(jIndex);
@@ -46,7 +46,7 @@ public class PrimeNumbers {
 			num++;
 		}
 
-		int numOfIts = 0;
+		//int numOfIts = 0;
 
 		for (int i = 2; i <= Math.sqrt(max); i++){	
 			for (int j = i + 1; j < max; j++){
@@ -57,9 +57,9 @@ public class PrimeNumbers {
 					}
 				}
 			}
-			numOfIts++;
+			//numOfIts++;
 		}
-		System.out.println("Number of Iterations: " + numOfIts);
+		//System.out.println("Number of Iterations: " + numOfIts);
 
 		return nums;
 	}

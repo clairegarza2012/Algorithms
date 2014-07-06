@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SteganogTest" project="garzaC_Steganog" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="SteganogTest" time="1.054">
+    <testcase name="Test" classname="SteganogTest" time="1.054"/>
+  </testsuite>
+</testrun>

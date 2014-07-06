@@ -1,0 +1,17 @@
+package edu.neumont.csc250;
+
+public class JosephusProblem {
+
+	private static void main(String[] args){
+		int n = 2;
+		
+		int lastNumber = findLast(n);
+		
+		System.out.println(lastNumber);
+	}
+
+	private static int findLast(int n) {
+		
+		return 0;
+	}
+}

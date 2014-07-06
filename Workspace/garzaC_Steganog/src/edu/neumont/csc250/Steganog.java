@@ -35,7 +35,8 @@ public class Steganog {
 			if(x > dirtyImage.width() * (y + 1))
 				y++;
 			xIndex = x % dirtyImage.width();
-			
+			System.out.println("embed whileing: " + x);
+
 			currentCharacter = letters.get(myMessage.charAt(messageIndex));
 			
 			messageIndex++;
@@ -102,6 +103,7 @@ public class Steganog {
 			if(x > imageWithSecretMessage.width() * (y + 1))
 				y++;
 			xIndex = x % imageWithSecretMessage.width();
+			System.out.println("retrieve whiling: " + x);
 			
 			Color color = imageWithSecretMessage.get(xIndex, y);
 			
