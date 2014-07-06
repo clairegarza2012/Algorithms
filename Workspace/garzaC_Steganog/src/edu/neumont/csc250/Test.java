@@ -12,7 +12,7 @@ public class Test {
 	
 	public static void main(String[] args) {
 
-		Picture pic = new Picture("cat.png");
+		Picture pic = new Picture("goldFish.png");
 
 		Steganog nog = new Steganog();
 
