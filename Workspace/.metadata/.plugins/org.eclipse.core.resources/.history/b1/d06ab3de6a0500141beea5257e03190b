@@ -46,6 +46,7 @@ public class PrimeIterator implements Iterator<Integer>{
 				if(nums.contains(j)){
 					int jIndex = nums.indexOf(j);
 					nums.remove(jIndex);
+					System.out.println("looping: " + j);
 				}
 			}
 		}
