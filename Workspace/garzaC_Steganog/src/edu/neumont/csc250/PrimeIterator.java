@@ -31,7 +31,7 @@ public class PrimeIterator implements Iterator<Integer>{
 		
 	}
 	
-	private static ArrayList<Integer> findPrimes(int max) {
+	private ArrayList<Integer> findPrimes(int max) {
 
 		ArrayList<Integer> nums = new ArrayList<Integer>();
 		

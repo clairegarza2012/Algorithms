@@ -1,0 +1,24 @@
+package edu.neumont.csc250;
+
+public class Summations {
+
+	public static void main(String[] args){
+		
+		int sum = oddSum(999);
+		
+		System.out.println(sum);
+	}
+	
+	public static int oddSum(int max){
+	
+		int sum = 0;
+		
+		for(int i = 1; i <= max; i += 2){
+			sum += i;
+			System.out.print(i + ", ");
+		}
+		
+		return sum;
+	}
+	
+}

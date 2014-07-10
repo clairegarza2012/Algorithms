@@ -136,7 +136,7 @@ public class Steganog {
 			
 			if(letter == '/')
 				break;
-			message += letter;
+			message += letters.get(character);
 			
 		}
 		

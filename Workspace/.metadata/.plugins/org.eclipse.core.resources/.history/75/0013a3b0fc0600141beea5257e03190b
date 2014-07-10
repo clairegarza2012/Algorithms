@@ -1,0 +1,21 @@
+package edu.neumont.csc250;
+
+public class IrrationalNumbers {
+
+	public static void main(String[] args){
+		
+		long a = (long)Math.PI;
+		long b = (long)Math.E;
+		
+		long piToE = findProduct(a, b);
+		long eToPi = findProduct(b, a);
+		
+		System.out.println(piToE + "\n" + eToPi);
+	}
+
+	private static long findProduct(long a, long b) {
+		
+		return (long)Math.pow(a, b);
+	}
+	
+}
