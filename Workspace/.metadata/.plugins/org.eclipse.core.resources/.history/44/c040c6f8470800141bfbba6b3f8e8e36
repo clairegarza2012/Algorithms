@@ -35,7 +35,7 @@ public class Steganog {
 				y++;
 			xIndex = x % dirtyImage.width();
 
-			currentCharacter = Integer.toBinaryString((char)(message.charAt(messageIndex) - 32));
+			currentCharacter = "" + (char)(message.charAt(messageIndex) - 32);
 			
 			messageIndex++;
 			

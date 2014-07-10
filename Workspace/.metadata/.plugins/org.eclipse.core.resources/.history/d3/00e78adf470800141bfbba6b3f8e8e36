@@ -15,6 +15,7 @@ public class Steganog {
 	public Picture embedIntoImage(Picture cleanImage, String message) 
 			throws IOException {
 
+		HashMap<Character, String> letters = instanciateLetters();
 		String myMessage = message.toUpperCase();
 		
 		Picture dirtyImage = cleanImage;
@@ -35,7 +36,7 @@ public class Steganog {
 				y++;
 			xIndex = x % dirtyImage.width();
 
-			currentCharacter = Integer.toBinaryString((char)(message.charAt(messageIndex) - 32));
+			currentCharacter = "" + (char)(message.charAt(messageIndex) - 32);
 			
 			messageIndex++;
 			
@@ -84,7 +85,8 @@ public class Steganog {
 	 */
 	public String retreiveFromImage(Picture imageWithSecretMessage)
 			throws IOException {
-		
+		HashMap<Character, String> letters = instanciateLetters();
+
 		String message = "";
 
 		int totalPixles = imageWithSecretMessage.height() * imageWithSecretMessage.width();
@@ -126,16 +128,58 @@ public class Steganog {
 			
 			String character = redChar + greenChar + blueChar;
 			
-			char letter = (char)(character.charAt(0) - 32);
+			char letter = ' ';
+			for (Character c: letters.keySet()){
+				if (letters.get(c).equals(character))
+					letter = c; 
+			}
 			
 			if(letter == '/')
 				break;
-			message += letter;
+			message += letters.get(character);
 			
 		}
 		
 		return message;
 	}
+
+	private HashMap<Character, String> instanciateLetters() {
+
+		HashMap<Character, String> letters = new HashMap<Character, String>();
+		Character a = ' ';
+		for(int i = 0; i < 64; i++){
+
+			String aString = a.toString();
+			aString = Integer.toBinaryString(i);
+
+			for (int j = aString.length(); j < 6; j++){
+				String add = "0";
+				aString = add + aString;
+			}
+
+			letters.put(a, aString);
+
+			a++;
+		}
+		
+		return letters;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
