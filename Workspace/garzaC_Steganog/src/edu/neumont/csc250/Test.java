@@ -11,13 +11,13 @@ public class Test {
 
 		Steganog nog = new Steganog();
 		
-		Picture picWithMessage = null;
-
-		try {
-			picWithMessage = nog.embedIntoImage(pic, "claire/");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		Picture picWithMessage = null;
+//
+//		try {
+//			picWithMessage = nog.embedIntoImage(pic, "claire is amazing/");
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 
 		//picWithMessage.save("newPic.png");
 		Picture pic2 = new Picture("newPic.png");
@@ -25,7 +25,7 @@ public class Test {
 		String message = "";
 
 		try {
-			message = nog.retreiveFromImage(picWithMessage);
+			message = nog.retreiveFromImage(pic);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -35,8 +35,10 @@ public class Steganog {
 				y++;
 			xIndex = x % dirtyImage.width();
 
-			currentCharacter = Integer.toBinaryString((char)(message.charAt(messageIndex) - 32));
-			
+			currentCharacter = Integer.toBinaryString((char)(myMessage.charAt(messageIndex) - 32));
+			for (int i = currentCharacter.length(); i < 6; i++){
+				currentCharacter = "0" + currentCharacter;
+			}
 			messageIndex++;
 			
 			Color oldColor = dirtyImage.get(xIndex, y);
@@ -126,8 +128,7 @@ public class Steganog {
 			
 			String character = redChar + greenChar + blueChar;
 			
-			char letter = (char)(character.charAt(0) - 32);
-			
+			char letter = (char)(Integer.parseInt(character, 2) + 32);
 			if(letter == '/')
 				break;
 			message += letter;
