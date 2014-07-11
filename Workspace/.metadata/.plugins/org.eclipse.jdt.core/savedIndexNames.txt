@@ -1,20 +1,5 @@
 INDEX VERSION 1.126+C:\Users\cgarza\Documents\GitHub\Algorithms\Workspace\.metadata\.plugins\org.eclipse.jdt.core
-1498219845.index
-1995173708.index
-4108727661.index
-1697886153.index
 3574084933.index
-1115467115.index
-2772403573.index
-4041092966.index
-1299022128.index
-2130518532.index
-3133528496.index
-3974580528.index
-3065916431.index
 1442934671.index
-4155206848.index
-30765161.index
-163172794.index
-172773091.index
-305854171.index
+2772403573.index
+2130518532.index

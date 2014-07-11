@@ -25,7 +25,7 @@ public class Test {
 		String message = "";
 
 		try {
-			message = nog.retreiveFromImage(pic2);
+			message = nog.retreiveFromImage(pic);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

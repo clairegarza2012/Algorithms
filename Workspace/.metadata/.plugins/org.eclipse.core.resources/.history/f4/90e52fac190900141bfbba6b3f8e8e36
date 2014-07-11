@@ -50,7 +50,7 @@ public class PrimeIterator implements Iterator<Integer>{
 		}
 
 		for (int i = 2; i <= Math.sqrt(max); i++){	
-			for (int j = (int)Math.pow(i, 2); j < max; j += i){
+			for (int j = 2 * i; j < max; j += i){
 				nums.put(j, false);
 			}
 		}
