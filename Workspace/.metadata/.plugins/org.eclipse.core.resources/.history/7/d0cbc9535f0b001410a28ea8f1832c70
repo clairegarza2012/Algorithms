@@ -1,0 +1,11 @@
+package edu.neumont.csc250;
+
+import java.util.List;
+
+public class ExhaustiveDecoder  {
+
+	public List<String> decode(String message) {
+		
+		return null;
+	}
+}

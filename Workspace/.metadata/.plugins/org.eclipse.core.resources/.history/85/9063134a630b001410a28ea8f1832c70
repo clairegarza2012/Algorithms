@@ -1,0 +1,36 @@
+package edu.neumont.csc250;
+
+import java.util.ArrayList;
+
+public class Resursion {
+
+	public static void main(String[] args){
+		//ArrayList<Integer> nums = new ArrayList<Integer>();
+		
+		int num = 7;
+		int factorial = findFactorialRecursive(num);
+		
+		System.out.println(factorial);
+	}
+	
+	
+	private static int findFactorial(int num) {
+		
+		int factorial = 1;
+		
+		for (int i= 1; i <= num; i++){
+			factorial *= i;
+		}
+		
+		return factorial;
+	}
+	
+	private static int findFactorialRecursive(int num){
+		
+		if(num <= 0){
+			return num;
+		}
+		
+		return findFactorialRecursive(num * num --);
+	}
+}

@@ -20,7 +20,7 @@ public class Test {
 //		}
 
 		//picWithMessage.save("newPic.png");
-		Picture pic2 = new Picture("newPic.png");
+		Picture pic2 = new Picture("jcMessage.png");
 
 		String message = "";
 

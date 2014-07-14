@@ -26,11 +26,22 @@ public class PrimeNumbers {
 			nums.put(num, true);
 			num++;
 		}
-
-		for (int i = 2; i <= Math.sqrt(max); i++){	
-			for (int j = 2 * i; j < max; j += i){
+		int jIndex = 2;
+		for (int i = 2; i <= Math.sqrt(max); i = jIndex){
+			
+			boolean foundPrime = false;
+			while(!foundPrime){
+				if( (nums.get(jIndex)) ){
+					foundPrime = true;
+				}else{
+					jIndex++;
+				}
+			}
+			
+			for (int j = (int) Math.pow(jIndex, 2); j < max; j += jIndex){
 				nums.put(j, false);
 			}
+			jIndex ++;
 		}
 
 		return nums;

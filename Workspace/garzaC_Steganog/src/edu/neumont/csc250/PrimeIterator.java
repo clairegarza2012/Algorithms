@@ -49,10 +49,23 @@ public class PrimeIterator implements Iterator<Integer>{
 			num++;
 		}
 
-		for (int i = 2; i <= Math.sqrt(max); i++){	
-			for (int j = (int)Math.pow(i, 2); j < max; j += i){
+		int jIndex = 2;
+		for (int i = 2; i <= Math.sqrt(max); i = jIndex){
+			
+			// find next not "marked" number
+			boolean foundPrime = false;
+			while(!foundPrime){
+				if( (nums.get(jIndex)) ){
+					foundPrime = true;
+				}else{
+					jIndex++;
+				}
+			}
+			
+			for (int j = (int) Math.pow(jIndex, 2); j < max; j += jIndex){
 				nums.put(j, false);
 			}
+			jIndex ++;
 		}
 
 		return nums;

@@ -1,0 +1,33 @@
+package edu.neumont.csc250;
+
+public class Resursion {
+
+	public static void main(String[] args){
+		
+		int num = 7;
+		int factorial = findFactorialRecursive(num);
+		
+		System.out.println(factorial);
+	}
+	
+	
+	private static int findFactorialIterative(int num) {
+		
+		int factorial = 1;
+		
+		for (int i= 1; i <= num; i++){
+			factorial *= i;
+		}
+		
+		return factorial;
+	}
+	
+	private static int findFactorialRecursive(int num){
+		
+		if(num <= 1){
+			return 1;
+		}
+		
+		return num * findFactorialRecursive(num--);
+	}
+}
