@@ -62,7 +62,7 @@ public class PrimeIterator implements Iterator<Integer>{
 				}
 			}
 			
-			// find all the multiples of the current prime number and set them to not prime
+			// find all the multiples of the current prime number
 			for (int j = (int) Math.pow(jIndex, 2); j < max; j += jIndex){
 				nums.put(j, false);
 			}
