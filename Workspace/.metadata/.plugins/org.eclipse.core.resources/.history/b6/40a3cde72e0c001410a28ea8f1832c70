@@ -1,0 +1,23 @@
+package edu.neumont.csc250;
+
+public class Backtracking {
+
+	public static void main(String[] args){
+		
+		Integer[] nums = {};
+	}
+	
+	public static Integer[][]findPermutatons(Integer[] array){
+		
+		return null;
+	}
+	
+	public static void findPermutationsHelper(Integer[] soFar, Integer[] toGo, Integer[] successes){
+		// success case
+		
+		// failure case
+		
+		// for loop to try each element of toGO
+		
+	}
+}

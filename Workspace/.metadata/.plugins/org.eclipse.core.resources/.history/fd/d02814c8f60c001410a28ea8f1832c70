@@ -1,0 +1,19 @@
+package edu.neumont.csc250;
+
+public class BinarySearch {
+
+	public static void main(String[] args){
+		
+	}
+	
+	public static int findIndexOf(int[] a, int k){
+		
+		int low = 0;
+		int high = a.length;
+		int mid = (high - low) / 2 + low;
+		
+		
+		
+		return 0;
+	}
+}
