@@ -13,6 +13,7 @@ public class Test {
 		List<String> possibilities3 = decoder.decode(".--..-...-..-..----..");
 		List<String> possibilities4 = decoder.decode(".--.-...--..-.-.--.-.----.");
 
+		
 		//List<String> possibilities = decoder.decode(".......---.----.-.....------..-.-.");
 		
 		for ( int i = 0; i < possibilities.size(); i++ ) {

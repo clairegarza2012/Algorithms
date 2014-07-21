@@ -92,7 +92,7 @@ public class ExhaustiveDecoder  {
 					if (!last.equals("")){
 						freq = (float)dd.frequencyOfFollowingWord(last, s);
 					}
-					if(last.equals("") || freq > 400)
+					if(last.equals("") || freq > 300)
 					{
 						ArrayList<String> newSoFar = new ArrayList<String>();
 						newSoFar.addAll(soFar);
