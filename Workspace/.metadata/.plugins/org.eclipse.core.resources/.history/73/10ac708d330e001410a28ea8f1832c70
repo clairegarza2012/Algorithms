@@ -1,0 +1,42 @@
+package edu.neumont.csc250;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import edu.neumont.nlp.DecodingDictionary;
+
+public class ExhaustiveDecoder  {
+	
+	private DecodingDictionary dd = new DecodingDictionary();
+
+	public List<String> decode(String message) {
+		
+		ArrayList<String> possibilities = new ArrayList<String>();
+		Set<String> soFar = new HashSet<String>();
+		
+		decodeHelper(soFar, message, possibilities);
+		
+		return possibilities;
+	}
+	
+	private void decodeHelper(Set<String> soFar, String toGo, List<String> possibilities){
+		
+		if (toGo.isEmpty() ){
+			possibilities.addAll(soFar);
+			return;
+		}
+		
+		for (int index = 0; index < toGo.length(); index++){
+
+			Set<String> words = dd.getWordsForCode(toGo.substring(index, index+1));
+
+			Set<String> newSoFar = soFar;
+
+			String newToGo = toGo;
+			
+			decodeHelper(newSoFar, newToGo, possibilities);
+		}
+	}
+}

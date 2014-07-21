@@ -1,0 +1,13 @@
+package edu.neumont.csc250;
+
+public class Phrase {
+
+	String myString;
+	float myFrequency;
+	
+	Phrase(){
+		
+	}
+	
+	
+}

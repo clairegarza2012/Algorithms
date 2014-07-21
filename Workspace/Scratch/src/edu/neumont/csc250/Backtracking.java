@@ -8,7 +8,20 @@ public class Backtracking {
 	public static void main(String[] args){
 
 		Integer[] nums = {1, 2, 3, 4, 5};
-		findPermutatons(nums);
+		Integer[][] permutations  = findPermutatons(nums);
+
+		print(permutations);
+	}
+
+	private static void print(Integer[][] permutations) {
+
+		for (int i = 0; i < permutations.length; i++){
+			for (int j = 0; j < permutations[i].length; j++){
+				System.out.print(permutations[i][j] + ", ");
+			}
+			System.out.println();
+		}
+
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -24,15 +37,26 @@ public class Backtracking {
 
 		findPermutationsHelper(soFar, toGo, successes);
 
-		for(int j = 0; j < successes.size(); j++){
-			System.out.print(successes.get(j) + ", ");
+		int size = 1;
+		
+		for (int i = array.length; i > 0; i--){
+			size *= i;
+		}
+		
+		Integer[][] twoDArray = new Integer[size][array.length];
+
+		int count = 0;
+		for(int j = 0; j < twoDArray.length; j++){
+			for (int k = 0; k < twoDArray[j].length; k ++){
+				twoDArray[j][k] = (Integer)successes.get(count++);
+			}				
 		}
 
-		return null;
+		return twoDArray;
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public static void findPermutationsHelper(List soFar, List toGo, List successes){
+	private static void findPermutationsHelper(List soFar, List toGo, List successes){
 		// success case
 		// if toGO is empty, success!
 		if (toGo.isEmpty() ){
@@ -50,10 +74,12 @@ public class Backtracking {
 			Integer i  = (Integer)toGo.get(index);
 			List newSoFar = new ArrayList(soFar);
 			newSoFar.add(i);
-			//Integer j = toGo.indexOf(i);
-			toGo.remove(i);
 
-			findPermutationsHelper(newSoFar, toGo, successes);
+			List newToGo = new ArrayList();
+			newToGo.addAll(toGo);
+			newToGo.remove(i);
+
+			findPermutationsHelper(newSoFar, newToGo, successes);
 
 		}
 	}

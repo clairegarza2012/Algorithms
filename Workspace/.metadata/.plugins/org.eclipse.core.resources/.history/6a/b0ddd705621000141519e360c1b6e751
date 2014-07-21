@@ -1,0 +1,80 @@
+package edu.neumont.csc250;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import edu.neumont.nlp.DecodingDictionary;
+
+public class ExhaustiveDecoder  {
+
+	private DecodingDictionary dd = new DecodingDictionary();
+
+	public List<String> decode(String message) {
+
+		ArrayList<String> possibilities = new ArrayList<String>();
+		ArrayList<String> soFar = new ArrayList<String>();
+
+		decodeHelper(soFar, message, possibilities);
+
+		//		for (String i : possibilities){
+		//			System.out.println(i);
+		//		}
+
+		return possibilities;
+	}
+
+	private void decodeHelper(ArrayList<String> soFar, String toGo, List<String> possibilities){
+
+		if (toGo.isEmpty() ){
+			String ans = "";
+			for (String i : soFar){
+				ans += i + " ";
+			}
+			possibilities.add(ans);
+			return;
+		}
+
+		for (int index = 1; index <= toGo.length(); index++){
+
+			Set<String> words = dd.getWordsForCode(toGo.substring(0, index));
+
+			String last = "";
+			Iterator<String> it = soFar.iterator();
+
+			while (it.hasNext()){
+				last = it.next();
+			}
+
+			if (words != null){
+				for (String s : words){
+
+					int frequency = 0;
+					
+					if (!last.equals("")){
+						frequency = dd.frequencyOfFollowingWord(last, s);
+					}
+					if(last.equals("") || frequency > 50)
+					{
+						ArrayList<String> newSoFar = new ArrayList<String>();
+						newSoFar.addAll(soFar);
+						newSoFar.add(s);
+	
+						String newToGo = toGo.substring(index);
+						System.out.println(last + " s:" + s + " " + newToGo);
+						
+						decodeHelper(newSoFar, newToGo, possibilities);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.debug.ui.SELECT_LAUNCH_SHORTCUT_DIALOG">
+		<item value="270" key="DIALOG_WIDTH"/>
+		<item value="454" key="DIALOG_HEIGHT"/>
+		<item value="1|Comic Sans MS|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|0|0|0|0|Comic Sans MS" key="DIALOG_FONT_NAME"/>
+	</section>
+</section>
