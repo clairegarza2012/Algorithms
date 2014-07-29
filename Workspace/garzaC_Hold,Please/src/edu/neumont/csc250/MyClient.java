@@ -15,9 +15,7 @@ public class MyClient extends Client implements Comparable<Object>{
 		return attritionTime;
 	}
 	
-	@Override
-	public int servedMinute() {
-		super.servedMinute();
+	public int waitedMinute(){
 		attritionTime--;
 		return attritionTime;
 	}

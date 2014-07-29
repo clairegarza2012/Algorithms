@@ -175,7 +175,7 @@ public class Hospital {
 
 		// If attrition time is 1
 		for (MyClient c : waitingRoom){
-			int remainingTime = c.servedMinute();
+			int remainingTime = c.waitedMinute();
 
 			if (remainingTime == 1){ // replace with highest attrition time
 				MyServer highest = findHighest(nurses);

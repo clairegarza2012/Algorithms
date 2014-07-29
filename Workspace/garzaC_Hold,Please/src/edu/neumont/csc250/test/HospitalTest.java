@@ -34,23 +34,21 @@ public class HospitalTest {
 		store.addClient(client14);
 		store.addClient(client15);
 
-		store.printLines();
-
 		Assert.assertEquals((Double)0d, (Double)store.getClientWaitTime(client1));
 
 		Assert.assertEquals((Double)3d, (Double)store.getClientWaitTime(client4));
 
 		Assert.assertEquals((Double)8d, (Double)store.getClientWaitTime(client15));
-
+		
 		store.advanceMinute();
 
-		Assert.assertEquals((Double)6d, (Double)store.getClientWaitTime(client1));
+		Assert.assertEquals((Double)8d, (Double)store.getClientWaitTime(client1));
 
 		Assert.assertEquals((Double)0d, (Double)store.getClientWaitTime(client4));
 
 		Assert.assertEquals((Double)0d, (Double)store.getClientWaitTime(client13));
 		
-		Assert.assertEquals((Double)6d, (Double)store.getClientWaitTime(client15));
+		Assert.assertEquals((Double)8d, (Double)store.getClientWaitTime(client15));
 
 		System.out.println(store.getAverageClientWaitTime());
 	}

@@ -9,29 +9,22 @@ public class SelectionSorter<T extends Comparable<T>> implements Sorter<T>{
 	@Override
 	public void sort(List<T> unsorted) {
 
-		List<T> temp = new ArrayList<T>();
+		int minIndex = -1;
+		for (int i = 0; i < unsorted.size(); i++){
 
-		for (int i = 1; i < unsorted.size(); i++){
-			T min = null;
+			minIndex = i;
+			for (int j = i + 1; j < unsorted.size(); j++){
 
-			for (int j = i; j < unsorted.size(); j++){
-				if (min == null){
-					min = unsorted.get(j);
-				}
-				else if (array[minIndex].compareTo(array[j]) > 0 ){
+				if (unsorted.get(minIndex).compareTo(unsorted.get(j)) > 0 ){
 					minIndex = j;
 				}
+
 			}
 			
-			T temp = array[i];
-			array[i] = array[minIndex];
-			array[minIndex] = temp;
-		}
+			T temp = unsorted.get(i);
+			unsorted.set(i, unsorted.get(minIndex));
+			unsorted.set(minIndex, temp);
 
-		unsorted.clear();
-		
-		for (T i : array){
-			unsorted.add(i);
 		}
 	}
 

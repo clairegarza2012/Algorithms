@@ -1,0 +1,36 @@
+package edu.neumont.csc250;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SelectionSorter<T extends Comparable<T>> implements Sorter<T>{
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public void sort(List<T> unsorted) {
+
+		List<T> temp = new ArrayList<T>();
+
+		int size =  unsorted.size();
+		T min = null;
+		for (int i = 0; i < size; i++){
+
+			min = unsorted.get(i);
+			for (int j = i + 1; j < size; j++){
+				
+				if (min.compareTo(unsorted.get(j)) > 0 ){
+					min = unsorted.get(j);
+				}
+			}
+			
+			System.out.println(min);
+			temp.add(min);
+			T t = unsorted.remove(i);
+			unsorted.remove(min);
+			unsorted.add(t);
+		}
+		unsorted.clear();
+		unsorted.addAll(temp);
+	}
+
+}
