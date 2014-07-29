@@ -1,0 +1,18 @@
+package edu.neumont.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import edu.neumont.csc250.LinkedList;
+
+public class LinkedListTest {
+
+	private LinkedList<Integer> list = new LinkedList<Integer>();
+	
+	@Test
+	public void test() {
+		
+	}
+
+}

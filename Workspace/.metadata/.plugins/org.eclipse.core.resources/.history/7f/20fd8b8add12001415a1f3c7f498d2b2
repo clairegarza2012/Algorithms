@@ -1,0 +1,17 @@
+package edu.neumont.csc250;
+
+import edu.neumont.util.Client;
+
+public class MyClient extends Client implements Comparable<MyClient>{
+
+	public MyClient(int expectedServiceTime) {
+		super(expectedServiceTime);
+	}
+	
+	@Override
+	public int compareTo(MyClient o) {
+		
+		return this.getExpectedServiceTime() > o.getExpectedServiceTime();
+	}
+
+}

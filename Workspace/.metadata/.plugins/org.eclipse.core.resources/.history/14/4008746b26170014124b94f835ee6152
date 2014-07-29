@@ -1,0 +1,7 @@
+package edu.neumont.csc250;
+
+public interface Shelver {
+
+	public void shelveBooks(Bookcase bookcase, List<Book> books);
+	
+}

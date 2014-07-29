@@ -1,0 +1,15 @@
+package edu.neumont.csc250;
+
+import java.util.Iterator;
+
+public class Test {
+
+	public static void main(String[] args){
+	
+		int numberOfLines = 3;
+		GroceryStore store = new GroceryStore(numberOfLines);
+		
+		store.
+	}
+	
+}

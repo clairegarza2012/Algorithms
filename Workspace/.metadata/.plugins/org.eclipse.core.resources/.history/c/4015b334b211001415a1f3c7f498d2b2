@@ -1,0 +1,45 @@
+package edu.neumont.csc250;
+
+import java.util.ArrayDeque;
+import edu.neumont.util.Client;
+import edu.neumont.util.QueueableService;
+import edu.neumont.util.Server;
+
+public class Bank implements QueueableService{
+
+	private ArrayDeque<Client> clientsWaitingForTeller = new ArrayDeque<Client>();
+	private ArrayList<Server> tellers = new ArrayList<Server>();
+	
+	public Bank(int numberOfTellers){
+		
+		for (int i = 0; i < numberOfTellers; i++){
+			Server s = new Server();
+			tellers.add(s);
+		}
+	}
+	
+	@Override
+	public double getAverageClientWaitTime() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getClientWaitTime(Client client) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean addClient(Client client) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void advanceMinute() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

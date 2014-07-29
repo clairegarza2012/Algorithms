@@ -1,0 +1,42 @@
+package edu.neumont.csc250.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import edu.neumont.csc250.GroceryStore;
+import edu.neumont.util.Client;
+
+public class GroceryStoreTest {
+
+	private GroceryStore store = new GroceryStore(3);
+	
+	@Test
+	public void test() {
+		
+		Client client1 = new Client(5);
+		Client client2 = new Client(6);
+		Client client3 = new Client(3);
+		Client client4 = new Client(10);
+		Client client5 = new Client(1);
+
+		store.addClient(client1);
+		store.addClient(client2);
+		store.addClient(client3);
+		store.addClient(client4);
+		store.addClient(client5);
+
+		store.printLines();
+
+		Assert.assertEquals(0, client1.getExpectedServiceTime());
+		System.out.println(client1.getExpectedServiceTime() + " " + store.getClientWaitTime(client1));
+		System.out.println(client2.getExpectedServiceTime() + " " + store.getClientWaitTime(client2));
+		System.out.println(client3.getExpectedServiceTime() + " " + store.getClientWaitTime(client3));
+		System.out.println(client4.getExpectedServiceTime() + " " + store.getClientWaitTime(client4));
+		System.out.println(client5.getExpectedServiceTime() + " " + store.getClientWaitTime(client5));
+
+		System.out.println(store.getAverageClientWaitTime());
+	}
+
+}

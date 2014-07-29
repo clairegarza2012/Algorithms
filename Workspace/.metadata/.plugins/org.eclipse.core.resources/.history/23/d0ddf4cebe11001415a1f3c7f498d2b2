@@ -1,0 +1,24 @@
+package edu.neumont.csc250;
+
+import java.util.Iterator;
+
+public class Test {
+
+	public static void main(String[] args){
+	
+		PriorityQueue<Integer> ints = new PriorityQueue<Integer>();
+		ints.offer(1);
+		ints.offer(3);
+		ints.offer(5);
+		ints.offer(7);
+		ints.offer(11);
+		ints.offer(13);
+		
+		Iterator<Integer> it = ints.iterator();
+		
+		while(it.hasNext()){
+			System.out.println(it.next());
+		}
+	}
+	
+}

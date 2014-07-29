@@ -2,16 +2,28 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.Timer"/>
 <fullyQualifiedTypeName name="edu.neumont.csc250.Steganog"/>
-<fullyQualifiedTypeName name="org.junit.Assert"/>
 <fullyQualifiedTypeName name="javax.swing.Timer"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
 <fullyQualifiedTypeName name="edu.neumont.nlp.DecodingDictionary"/>
 <fullyQualifiedTypeName name="edu.neumont.csc250.Factorial"/>
-<fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.Queue"/>
+<fullyQualifiedTypeName name="edu.neumont.util.Queue"/>
+<fullyQualifiedTypeName name="edu.neumont.util.List"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="edu.neumont.util.QueueableService"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.ArrayDeque"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="edu.neumont.util.Client"/>
+<fullyQualifiedTypeName name="edu.neumont.util.Server"/>
+<fullyQualifiedTypeName name="edu.neumont.csc250.LinkedList"/>
+<fullyQualifiedTypeName name="java.lang.AssertionError"/>
+<fullyQualifiedTypeName name="edu.neumont.csc250.PriorityQueue"/>
+<fullyQualifiedTypeName name="edu.neumont.csc250.ArrayList"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
 </qualifiedTypeNameHistroy>

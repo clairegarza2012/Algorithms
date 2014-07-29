@@ -1,0 +1,9 @@
+package edu.neumont.csc250;
+
+import java.util.List;
+
+public interface Shelver {
+
+	//public void shelveBooks(Bookcase bookcase, List<Book> books);
+	
+}

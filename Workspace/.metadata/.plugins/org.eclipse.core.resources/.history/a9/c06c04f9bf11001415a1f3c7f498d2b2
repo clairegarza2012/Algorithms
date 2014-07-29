@@ -1,0 +1,30 @@
+package edu.neumont.csc250;
+
+import edu.neumont.util.Client;
+
+public class Test {
+
+	public static void main(String[] args){
+	
+		int numberOfLines = 3;
+		
+		GroceryStore store = new GroceryStore(numberOfLines);
+		
+		Client client1 = new Client(2);
+		Client client2 = new Client(2);
+		Client client3 = new Client(2);
+		Client client4 = new Client(2);
+		Client client5 = new Client(2);
+
+		store.addClient(client1);
+		store.addClient(client2);
+		store.addClient(client3);
+		store.addClient(client4);
+		store.addClient(client5);
+
+		store.advanceMinute();
+		
+		System.out.println("Well Done");
+	}
+	
+}

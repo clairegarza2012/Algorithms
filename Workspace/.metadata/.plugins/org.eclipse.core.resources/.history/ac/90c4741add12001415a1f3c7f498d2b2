@@ -1,0 +1,17 @@
+package edu.neumont.csc250;
+
+import edu.neumont.util.Client;
+
+public class MyClient extends Client implements Comparable<Object>{
+
+	public MyClient(int expectedServiceTime) {
+		super(expectedServiceTime);
+	}
+
+	@Override
+	public int compareTo(Object arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
