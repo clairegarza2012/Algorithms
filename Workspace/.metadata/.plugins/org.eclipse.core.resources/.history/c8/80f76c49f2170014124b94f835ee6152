@@ -29,8 +29,8 @@ public class QuickSorter<T extends Comparable<T>> implements Sorter<T>{
 				right.add(t);
 			}
 		}
-		sortHelper(original, left);
-		sortHelper(original, right);
+		sortHelper(partial, left);
+		sortHelper(partial, right);
 	}
 
 }

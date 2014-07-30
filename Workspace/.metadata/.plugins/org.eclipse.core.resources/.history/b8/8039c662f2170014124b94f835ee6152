@@ -8,29 +8,31 @@ public class QuickSorter<T extends Comparable<T>> implements Sorter<T>{
 	@Override
 	public void sort(List<T> unsorted) {
 
-		sortHelper(unsorted, unsorted);
+		sortHelper(unsorted);
 	}
 	
-	private void sortHelper(List<T> original, List<T> partial){
+	private void sortHelper(List<T> original){
 		
-		if (partial.size() == 1)
+		if (original.size() == 1)
 			return;
 		
-		int pivotIndex = partial.size() / 2;
-		T pivot = partial.get(pivotIndex);
+		int pivotIndex = original.size() / 2;
+		T pivot = original.get(pivotIndex);
 		
 		List<T> left = new ArrayList<T>();
 		List<T> right = new ArrayList<T>();
 
-		for(T t : partial){
+		for(T t : original){
 			if (t.compareTo(pivot) <= 0){
 				left.add(t);
 			}else{
 				right.add(t);
 			}
 		}
-		sortHelper(original, left);
-		sortHelper(original, right);
+		original = left;
+		sortHelper(original);
+		original = right;
+		sortHelper(original);
 	}
 
 }

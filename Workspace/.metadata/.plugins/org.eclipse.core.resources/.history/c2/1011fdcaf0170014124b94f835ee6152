@@ -1,0 +1,23 @@
+package edu.neumont.csc250;
+
+import java.util.List;
+
+public class QuickSorter<T extends Comparable<T>> implements Sorter<T>{
+
+	@Override
+	public void sort(List<T> unsorted) {
+
+	}
+	
+	private void sortHelper(List<T> list, int leftIndex, int rightIndex){
+		
+		if (listSize <= 1)
+			return;
+		
+		int pivotIndex = (rightIndex - leftIndex) / 2;
+		T pivot = list.get(leftIndex + pivotIndex);
+		
+		
+	}
+
+}
