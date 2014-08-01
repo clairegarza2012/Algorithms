@@ -43,7 +43,9 @@ public class QuickSorter<T extends Comparable<T>> implements Sorter<T>{
 			original.set(i + startIndex, left.get(i));
 			count ++;
 		}
-				
+		
+		//original.set(startIndex + count++, pivot);
+		
 		for(int i = count; i < left.size() + same.size(); i++){
 			original.set(i + startIndex, same.get(i - count));
 			count++;
