@@ -1,0 +1,12 @@
+package edu.neumont.csc250.test;
+
+import org.junit.Test;
+
+public class DynamicShelfTest {
+
+	@Test
+	public void test() {
+
+	}
+
+}

@@ -10,22 +10,24 @@ public class GreedyShelver implements Shelver{
 
 	@Override
 	public void shelveBooks(Bookcase bookcase, List<Book> books) {
-		
+
 		QuickSorter<Book> sorter = new QuickSorter<Book>();
 		sorter.sort(books);
-		
+
 		shelveBooksHelper(bookcase, books);
 	}
 
 	private void shelveBooksHelper(Bookcase bookcase, List<Book> books) {
-	
+
+		int bookIndex = 0;
 		for (int shelfIndex = 0; shelfIndex < bookcase.getNumberOfShelves(); shelfIndex++){
-			
-			for (int bookIndex = 0; bookIndex < books.size(); bookIndex++){
-				bookcase.addBook(bookcase.getBookshelf(shelfIndex), books.get(i));
+
+			while(bookIndex < books.size() && bookcase.getBookshelf(shelfIndex).addBook(books.get(bookIndex))){
+				bookIndex ++;
 			}
+
 		}
-		
+
 	}
 
 }

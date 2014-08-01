@@ -3,6 +3,8 @@ package edu.neumont.csc250.test;
 import java.util.ArrayList;
 import java.util.List;
 
+import junit.framework.Assert;
+
 import org.junit.Test;
 
 import edu.neumont.csc250.GreedyShelver;
@@ -13,7 +15,7 @@ public class GreedyShelfTest {
 
 	private int numberOfShelves = 3;
 	private int shelfWidth = 6;
-	private Bookcase bookcase = new Bookcase(3, 6);
+	private Bookcase bookcase = new Bookcase(numberOfShelves, shelfWidth);
 	
 	private GreedyShelver shelver = new GreedyShelver();
 	
@@ -35,6 +37,14 @@ public class GreedyShelfTest {
 		books.add(book5);
 
 		shelver.shelveBooks(bookcase, books);
+		
+		Assert.assertEquals(1, bookcase.getBookshelf(0).getBookCount());
+		Assert.assertEquals(2, bookcase.getBookshelf(1).getBookCount());
+		Assert.assertEquals(2, bookcase.getBookshelf(2).getBookCount());
+		
+		Assert.assertEquals(1, bookcase.getBookshelf(0).getSpaceLeft());
+		Assert.assertEquals(2, bookcase.getBookshelf(1).getSpaceLeft());
+		Assert.assertEquals(0, bookcase.getBookshelf(2).getSpaceLeft());
 		
 		System.out.println(bookcase.toString());
 		
