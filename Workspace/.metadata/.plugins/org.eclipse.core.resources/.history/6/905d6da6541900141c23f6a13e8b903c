@@ -38,11 +38,13 @@ public class DynamicShelver implements Shelver{
 				mostEvenness = successes.get(i);
 			}
 		}
-	
+		//System.out.println(mostEvenness);
+		
+//		System.out.println(bookcase);	
 		int bookIndex = 0;
 		for (int shelfIndex = 0; shelfIndex < mostEvenness.getBookcase().getNumberOfShelves(); shelfIndex++){
 
-			while(bookIndex < mostEvenness.getBooks().size() && bookcase.getBookshelf(shelfIndex).addBook(mostEvenness.getBooks().get(bookIndex))){
+			while(bookIndex < soFar.size() && bookcase.getBookshelf(shelfIndex).addBook(soFar.get(bookIndex))){
 				bookIndex ++;
 			}	
 		}		

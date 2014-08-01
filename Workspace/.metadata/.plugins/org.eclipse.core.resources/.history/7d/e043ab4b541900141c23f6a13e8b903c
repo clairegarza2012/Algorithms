@@ -27,43 +27,32 @@ public class DynamicShelver implements Shelver{
 	private void shelveBooksHelper(Bookcase bookcase, List<Book> books) {
 
 		List<Book> soFar = new ArrayList<>();
-		HashMap<Integer, MyBookcase> successes = new HashMap<>();
+		HashMap<Integer, List<Book>> successes = new HashMap<>();
 
 		findPermutations(soFar, books, successes);
 
-		MyBookcase mostEvenness = successes.get(0);
+		List<Book> mostEvenness = successes.get(0);
 		
 		for (int i = 1; i < successes.size(); i++){
-			if (mostEvenness.getBookcase().scoreShelfEvenness() > successes.get(i).getBookcase().scoreShelfEvenness()){
+			if (mostEvenness.scoreShelfEvenness() > successes.get(i).scoreShelfEvenness()){
 				mostEvenness = successes.get(i);
 			}
 		}
-	
-		int bookIndex = 0;
-		for (int shelfIndex = 0; shelfIndex < mostEvenness.getBookcase().getNumberOfShelves(); shelfIndex++){
+		//System.out.println(mostEvenness);
+		
+//		System.out.println(bookcase);		
+		for (int shelfIndex = 0; shelfIndex < mostEvenness.getNumberOfShelves(); shelfIndex++){
 
-			while(bookIndex < mostEvenness.getBooks().size() && bookcase.getBookshelf(shelfIndex).addBook(mostEvenness.getBooks().get(bookIndex))){
-				bookIndex ++;
-			}	
+					
 		}		
 		
 	}
+	
 	private int count = 0;
-	private void findPermutations(List<Book> soFar, List<Book> toGo, HashMap<Integer, MyBookcase> successes){
+	private void findPermutations(List<Book> soFar, List<Book> toGo, HashMap<Integer, successes){
 		
 		if (toGo.isEmpty() ){
-			Bookcase bookcase = new Bookcase(numberOfShelves, shelfWidth);
-			
-			int bookIndex = 0;
-			for (int shelfIndex = 0; shelfIndex < bookcase.getNumberOfShelves(); shelfIndex++){
-
-				while(bookIndex < soFar.size() && bookcase.getBookshelf(shelfIndex).addBook(soFar.get(bookIndex))){
-					bookIndex ++;
-				}
-
-			}
-			MyBookcase mB = new MyBookcase(bookcase, soFar);
-			successes.put(count++, mB);
+			successes.put(count++, soFar);
 			return;
 		}
 

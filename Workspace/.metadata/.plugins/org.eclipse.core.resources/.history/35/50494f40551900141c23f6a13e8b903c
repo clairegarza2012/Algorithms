@@ -2,9 +2,6 @@ package edu.neumont.csc250.test;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import junit.framework.Assert;
-
 import org.junit.Test;
 
 import edu.neumont.csc250.DynamicShelver;
@@ -38,14 +35,6 @@ public class DynamicShelfTest {
 
 		shelver.shelveBooks(bookcase, books);
 
-		Assert.assertEquals(2, bookcase.getBookshelf(0).getBookCount());
-		Assert.assertEquals(2, bookcase.getBookshelf(1).getBookCount());
-		Assert.assertEquals(1, bookcase.getBookshelf(2).getBookCount());
-		
-		Assert.assertEquals(1, bookcase.getBookshelf(0).getSpaceLeft());
-		Assert.assertEquals(2, bookcase.getBookshelf(1).getSpaceLeft());
-		Assert.assertEquals(2, bookcase.getBookshelf(2).getSpaceLeft());
-		
 		System.out.println(bookcase);
 	}
 

@@ -1,7 +1,6 @@
 package edu.neumont.csc250;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import edu.neumont.csc250.lab4.Book;
@@ -27,29 +26,35 @@ public class DynamicShelver implements Shelver{
 	private void shelveBooksHelper(Bookcase bookcase, List<Book> books) {
 
 		List<Book> soFar = new ArrayList<>();
-		HashMap<Integer, MyBookcase> successes = new HashMap<>();
+		List<Bookcase> successes = new ArrayList<>();
 
 		findPermutations(soFar, books, successes);
 
-		MyBookcase mostEvenness = successes.get(0);
+		Bookcase mostEvenness = successes.get(0);
 		
 		for (int i = 1; i < successes.size(); i++){
-			if (mostEvenness.getBookcase().scoreShelfEvenness() > successes.get(i).getBookcase().scoreShelfEvenness()){
+			if (mostEvenness.scoreShelfEvenness() > successes.get(i).scoreShelfEvenness()){
 				mostEvenness = successes.get(i);
 			}
 		}
-	
-		int bookIndex = 0;
-		for (int shelfIndex = 0; shelfIndex < mostEvenness.getBookcase().getNumberOfShelves(); shelfIndex++){
+		//System.out.println(mostEvenness);
+		
+//		System.out.println(bookcase);		
+		for (int shelfIndex = 0; shelfIndex < mostEvenness.getNumberOfShelves(); shelfIndex++){
 
-			while(bookIndex < mostEvenness.getBooks().size() && bookcase.getBookshelf(shelfIndex).addBook(mostEvenness.getBooks().get(bookIndex))){
-				bookIndex ++;
-			}	
+			BookshelfIterator it = new BookshelfIterator(shelfWidth);
+			it = (BookshelfIterator) mostEvenness.getBookshelf(shelfIndex);
+			while(it.hasNext()){
+				bookcase.addBook(shelfIndex, it.next());
+			}
+			
 		}		
 		
+		
+		System.out.println(bookcase);
 	}
-	private int count = 0;
-	private void findPermutations(List<Book> soFar, List<Book> toGo, HashMap<Integer, MyBookcase> successes){
+	
+	private void findPermutations(List<Book> soFar, List<Book> toGo, List<Bookcase> successes){
 		
 		if (toGo.isEmpty() ){
 			Bookcase bookcase = new Bookcase(numberOfShelves, shelfWidth);
@@ -62,8 +67,8 @@ public class DynamicShelver implements Shelver{
 				}
 
 			}
-			MyBookcase mB = new MyBookcase(bookcase, soFar);
-			successes.put(count++, mB);
+			
+			successes.add(bookcase);
 			return;
 		}
 

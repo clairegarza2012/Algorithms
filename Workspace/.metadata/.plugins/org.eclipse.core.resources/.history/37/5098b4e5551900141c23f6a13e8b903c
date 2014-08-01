@@ -13,7 +13,12 @@ public class MergeSorter<T extends Comparable<T>> implements Sorter<T>{
 	public void sortHelper(List<T> original, int startIndex, int endIndex){
 		
 		if (startIndex + 1 >= endIndex ){
-
+			if (original.get(startIndex).compareTo(original.get(startIndex + 1)) > 0){
+				T temp = original.get(startIndex);
+				original.set(startIndex, original.get(startIndex + 1));
+				original.set(startIndex + 1, temp);
+			}
+				
 			return;
 		}
 		
