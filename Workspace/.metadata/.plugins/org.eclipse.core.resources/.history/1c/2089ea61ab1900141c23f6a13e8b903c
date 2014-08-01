@@ -17,14 +17,13 @@ public class QuickSorter<T extends Comparable<T>> implements Sorter<T>{
 		if (startIndex + 1 >= endIndex )
 			return;
 
-		int pivotIndex = (startIndex + endIndex) / 2;
-		T pivot = original.get(pivotIndex);
+		T pivot = original.get((startIndex + endIndex) / 2);
 
 		List<T> left = new ArrayList<T>();
 		List<T> right = new ArrayList<T>();
 		List<T> same = new ArrayList<T>();
 
-		System.out.println("pivot: " + pivot + " " + startIndex + " " + endIndex + "\n\t" + original.toString());
+		//System.out.println("pivot: " + pivot + " " + startIndex + " " + endIndex + "\n\t" + original.toString());
 		for (int i = startIndex; i < endIndex; i++){
 			
 			if (pivot.compareTo(original.get(i)) < 0){
@@ -46,12 +45,12 @@ public class QuickSorter<T extends Comparable<T>> implements Sorter<T>{
 		
 		//original.set(startIndex + count++, pivot);
 		
-		for(int i = count; i < left.size() + same.size(); i++){
+		for(int i = count; i <= left.size() + same.size(); i++){
 			original.set(i + startIndex, same.get(i - count));
 			count++;
 		}
 		
-		for (int i = count; i < left.size() + same.size() + right.size(); i++){
+		for (int i = count; i <= left.size() + same.size() + right.size(); i++){
 			original.set(i + startIndex, right.get(i - count));
 		}
 		

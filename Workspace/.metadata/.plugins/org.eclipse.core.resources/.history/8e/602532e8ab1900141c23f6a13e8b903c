@@ -33,6 +33,9 @@ public class QuickSorter<T extends Comparable<T>> implements Sorter<T>{
 			else if (pivot.compareTo(original.get(i)) > 0){
 				right.add(original.get(i));
 			}
+			else if (pivotIndex == i){
+				
+			}
 			else if (pivot.compareTo(original.get(i)) == 0){
 				same.add(original.get(i));
 			}
@@ -44,14 +47,14 @@ public class QuickSorter<T extends Comparable<T>> implements Sorter<T>{
 			count ++;
 		}
 		
-		//original.set(startIndex + count++, pivot);
+		original.set(startIndex + count++, pivot);
 		
-		for(int i = count; i < left.size() + same.size(); i++){
+		for(int i = count; i <= left.size() + same.size(); i++){
 			original.set(i + startIndex, same.get(i - count));
 			count++;
 		}
 		
-		for (int i = count; i < left.size() + same.size() + right.size(); i++){
+		for (int i = count; i <= left.size() + same.size() + right.size(); i++){
 			original.set(i + startIndex, right.get(i - count));
 		}
 		
