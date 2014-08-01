@@ -15,7 +15,7 @@ public class SelectionSorter<T extends Comparable<T>> implements Sorter<T>{
 			minIndex = i;
 			for (int j = i + 1; j < unsorted.size(); j++){
 
-				if (unsorted.get(minIndex).compareTo(unsorted.get(j)) > 0 ){
+				if (unsorted.get(minIndex).compareTo(unsorted.get(j)) < 0 ){
 					minIndex = j;
 				}
 

@@ -6,7 +6,7 @@ import junit.framework.Assert;
 import org.junit.Test;
 import edu.neumont.csc250.SelectionSorter;
 
-public class SelectionsortTest {
+public class SelectionSortTest {
 
 	private SelectionSorter<Integer> sorter = new SelectionSorter<>();
 	
@@ -26,14 +26,11 @@ public class SelectionsortTest {
 
 		sorter.sort(list);
 		
-		for (int i = 0; i < list.size(); i++){
-			System.out.println(list.get(i));
-		}
+		Assert.assertEquals((Integer) 3, list.get(3));
 		
-		Assert.assertEquals((Integer) 3, list.get(0));
-		
-		Assert.assertEquals((Integer) 10, list.get(3));
+		Assert.assertEquals((Integer) 10, list.get(0));
 
+		System.out.println(list.toString());
 	}
 
 }

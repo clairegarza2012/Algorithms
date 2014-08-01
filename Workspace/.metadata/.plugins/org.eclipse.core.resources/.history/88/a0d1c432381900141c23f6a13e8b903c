@@ -1,0 +1,14 @@
+package edu.neumont.csc250.test;
+
+import org.junit.Test;
+
+public class GreedyShelfTest {
+
+	private int numberOfShelves = 3;
+	
+	@Test
+	public void test() {
+
+	}
+
+}

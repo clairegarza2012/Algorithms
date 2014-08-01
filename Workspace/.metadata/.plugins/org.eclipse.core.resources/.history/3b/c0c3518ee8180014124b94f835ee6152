@@ -1,0 +1,36 @@
+package edu.neumont.csc250;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class QuickSorter<T extends Comparable<T>> implements Sorter<T>{
+
+	@Override
+	public void sort(List<T> unsorted) {
+
+		sortHelper(unsorted, 0, unsorted.size() - 1);
+	}
+
+	private void sortHelper(List<T> original, int startIndex, int endIndex){
+
+		if (original.size() <= 1)
+			return;
+
+		T pivot = original.get(startIndex);
+
+		int upIndex = startIndex + 1;
+		int downIndex = endIndex;
+		
+		// find first index that contains a value less than pivot
+			// make value upIndex
+		// find first value that contains a value greater than pivot
+		   // make value down index
+		// swap values
+		
+		// do the above until
+			// if 
+		
+
+	}
+
+}

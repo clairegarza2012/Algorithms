@@ -484,3 +484,13 @@ java.util.zip.ZipException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!SESSION 2014-07-31 16:18:30.118 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.7.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data C:\Users\cgarza\Documents\GitHub\Algorithms\Workspace -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-07-31 16:18:31.855
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

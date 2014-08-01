@@ -17,29 +17,43 @@ public class QuickSortTest {
 		
 		List<Integer> list = new ArrayList<Integer>();
 		
-		list.add(10);
 		list.add(5);
+		list.add(4);
 		list.add(3);
+		list.add(7);
 		list.add(6);
-		list.add(2);
-			
-		Assert.assertEquals((Integer) 10, list.get(0));
+		list.add(5);
+		list.add(38);
+		list.add(4);
+		list.add(5);
 		
-		Assert.assertEquals((Integer) 2, list.get(4));
+//		list.add(5);
+//		list.add(4);
+//		list.add(3);
+//		list.add(7);
+//		list.add(6);
+//		list.add(5);
+//		list.add(38);
+//		list.add(4);
+//		list.add(5);
+
+		Assert.assertEquals((Integer) 5, list.get(0));
 		
-		Assert.assertEquals((Integer) 3, list.get(2));
+		Assert.assertEquals((Integer) 5, list.get(5));
+		
+		Assert.assertEquals((Integer) 5, list.get(8));
 		
 		sorter.sort(list);
 		
-		Assert.assertEquals((Integer) 2, list.get(0));
+		System.out.println(list.toString());
+
+		Assert.assertEquals((Integer) 3, list.get(8));
+
+		Assert.assertEquals((Integer) 5, list.get(4));
+
+		Assert.assertEquals((Integer) 7, list.get(1));
 		
-		Assert.assertEquals((Integer) 10, list.get(4));
-		
-		Assert.assertEquals((Integer) 5, list.get(2));
-		
-		for(Integer i : list){
-			System.out.println(i);
-		}
+		Assert.assertEquals((Integer) 38, list.get(0));
 
 	}
 

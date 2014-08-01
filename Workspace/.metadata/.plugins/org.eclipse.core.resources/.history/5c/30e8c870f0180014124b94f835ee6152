@@ -1,0 +1,74 @@
+package edu.neumont.csc250;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class QuickSorter<T extends Comparable<T>> implements Sorter<T>{
+
+	@Override
+	public void sort(List<T> unsorted) {
+
+		sortHelper(unsorted, 0, unsorted.size());
+	}
+
+	private void sortHelper(List<T> original, int startIndex, int endIndex){
+
+		if (startIndex == endIndex)
+			return;
+
+		T pivot = original.get(startIndex);
+
+		int upIndex = startIndex;
+		int downIndex = endIndex;
+
+		//while (count < endIndex){
+
+		// find upIndex: first index from the left that is less than the pivot
+		boolean upFound = false;
+		while (!upFound){
+			if(pivot.compareTo(original.get(++upIndex)) < 0){
+				upFound = true;
+			}
+		}
+
+		// find downIndex: first index from the right that is greater than the pivot
+		boolean downFound = false;
+		while (!downFound){
+			if(pivot.compareTo(original.get(--downIndex)) > 0){
+				downFound = true;
+			}
+
+		}
+
+		// swap index values
+		if (upIndex < downIndex){
+			T temp = original.get(upIndex);
+			original.set(upIndex, original.get(downIndex));
+			original.set(downIndex, temp);
+		}
+
+		//}
+
+		// when up index is greater than down index 
+		// swap down index value with pivot value
+		original.set(startIndex, original.get(upIndex));
+		original.set(upIndex, pivot);
+
+		// then recurse startIndex, upIndex 
+		//sortHelper(original, startIndex + 1, downIndex);
+		// then recurse downIndex, endIndex
+		//sortHelper(original, downIndex, endIndex);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
