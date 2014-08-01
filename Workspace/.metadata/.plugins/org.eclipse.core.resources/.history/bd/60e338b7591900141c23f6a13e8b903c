@@ -34,9 +34,9 @@ public class MergeSortTest {
 		
 		Assert.assertEquals((Integer) 6, list.get(0));
 
-		Assert.assertEquals((Integer) 5, list.get(2));
+		Assert.assertEquals((Integer) 4, list.get(2));
 
-		Assert.assertEquals((Integer) 4, list.get(4));
+		Assert.assertEquals((Integer) 5, list.get(4));
 				
 		System.out.println(list);
 	}

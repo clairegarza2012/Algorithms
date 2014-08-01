@@ -25,10 +25,10 @@ public class MergeSorter<T extends Comparable<T>> implements Sorter<T>{
 
 		for (int i = 0; i < original.size(); i++){
 			
-			if (i >= middleIndex){
+			if (i < middleIndex){
 				left.add(original.get(i));
 			}
-			else if (i < middleIndex){
+			else if (i >= middleIndex){
 				right.add(original.get(i));
 			}
 
@@ -46,21 +46,25 @@ public class MergeSorter<T extends Comparable<T>> implements Sorter<T>{
 		
 		int leftIndex = 0;
 		int rightIndex = 0;
-
-		while (leftIndex < left.size() || rightIndex < right.size()){
-			if (leftIndex < left.size() && rightIndex < right.size()){
-				if (left.get(leftIndex).compareTo(right.get(rightIndex)) >= 0){
-					result.add(left.get(leftIndex++));
+		// leftIndex < left.size() ...
+		while (left.size() > 0 || right.size() > 0){
+			if (left.size() > 0 && right.size() > 0){
+				if (left.get(0).compareTo(right.get(0)) <= 0){
+					result.add(left.get(0));
+					left.remove(0);
 				}
 				else{
-					result.add(right.get(rightIndex++));
+					result.add(right.get(0));
+					right.remove(0);
 				}
 			}
-			else if (leftIndex < left.size()) {
-				result.add(left.get(leftIndex++));
+			else if (left.size() > 0) {
+				result.add(left.get(0));
+				left.remove(0);
 			}
-			else if (rightIndex < right.size()){
-				result.add(right.get(rightIndex++));
+			else if (right.size() > 0){
+				result.add(right.get(0));
+				right.remove(0);
 			}
 		}
 		

@@ -9,8 +9,9 @@ public class MergeSorter<T extends Comparable<T>> implements Sorter<T>{
 	public void sort(List<T> unsorted) {
 	
 		List<T> temp = sortHelper(unsorted);
-		unsorted.clear();
-		unsorted.addAll(temp);
+		//unsorted.clear();
+		//unsorted.addAll(temp);
+		unsorted = temp;
 	}
 
 	public List<T> sortHelper(List<T> original){

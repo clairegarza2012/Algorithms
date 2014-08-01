@@ -46,21 +46,25 @@ public class MergeSorter<T extends Comparable<T>> implements Sorter<T>{
 		
 		int leftIndex = 0;
 		int rightIndex = 0;
-
+		// leftIndex < left.size() ...
 		while (leftIndex < left.size() || rightIndex < right.size()){
 			if (leftIndex < left.size() && rightIndex < right.size()){
 				if (left.get(leftIndex).compareTo(right.get(rightIndex)) >= 0){
 					result.add(left.get(leftIndex++));
+					//left.remove(0);
 				}
 				else{
 					result.add(right.get(rightIndex++));
+					//right.remove(0);
 				}
 			}
 			else if (leftIndex < left.size()) {
 				result.add(left.get(leftIndex++));
+				//left.remove(0);
 			}
 			else if (rightIndex < right.size()){
 				result.add(right.get(rightIndex++));
+				//right.remove(0);
 			}
 		}
 		
