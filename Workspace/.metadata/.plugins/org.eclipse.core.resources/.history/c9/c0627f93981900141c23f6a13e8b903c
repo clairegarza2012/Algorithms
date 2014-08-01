@@ -54,7 +54,7 @@ public class DynamicShelfTest {
 	public void classTest(){
 		
 		int numberOfShelves = 3;
-		int shelfWidth = 6;
+		int shelfWidth = 5;
 
 		Bookcase bookcase = new Bookcase(numberOfShelves, shelfWidth);
 		DynamicShelver shelver = new DynamicShelver();

@@ -47,12 +47,12 @@ public class DynamicShelver implements Shelver{
 				}
 			}
 		}
-
+		
 		costArray[0] = 0;
-
+		
 		for (int j = 1; j <= books.size(); j++){
 			costArray[j] = max;
-
+			
 			for (int i = 1; i <= j; i++){
 				if (costArray[i - 1] != max && lc[i][j] != max && costArray[i-1] + lc[i][j] < costArray[j]){
 					costArray[j] = costArray[i - 1] + lc[i][j];
@@ -60,23 +60,26 @@ public class DynamicShelver implements Shelver{
 				}
 			}
 		}
-
+		
 		populateBookcase(bookcase, positionArray, books, books.size());
 	}
 
 	private int populateBookcase(Bookcase bookcase, int[] positionArray, List<Book> books, int n){
-
+		
+		Book b = null;
 		int k = 0;
-		if (positionArray[n] == 1){
+		if (positionArray[books.size()] == 1){
 			k = 1;
+			b = books.get(k);
+			bookcase.getBookshelf(k).addBook(b);
 		}
 		else{
 			k = populateBookcase(bookcase, positionArray, books, positionArray[n] - 1) + 1;
+			b = books.get(k);
+			bookcase.getBookshelf(k).addBook(b);
 		}
-		for (int i = positionArray[n] - 1; i < n; i++){
-			bookcase.getBookshelf(k - 1).addBook(books.get(i));
-		}
-
+		
+		
 		return k;
 	}
 }

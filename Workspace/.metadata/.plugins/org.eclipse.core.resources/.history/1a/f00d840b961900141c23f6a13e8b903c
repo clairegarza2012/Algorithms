@@ -66,6 +66,7 @@ public class DynamicShelver implements Shelver{
 
 	private int populateBookcase(Bookcase bookcase, int[] positionArray, List<Book> books, int n){
 
+		Book b = null;
 		int k = 0;
 		if (positionArray[n] == 1){
 			k = 1;
@@ -77,6 +78,7 @@ public class DynamicShelver implements Shelver{
 			bookcase.getBookshelf(k - 1).addBook(books.get(i));
 		}
 
+		System.out.println(k + ": " + (positionArray[n] - 1) + " to " + (n - 1) + " " + bookcase);
 		return k;
 	}
 }

@@ -62,6 +62,15 @@ public class DynamicShelver implements Shelver{
 		}
 
 		populateBookcase(bookcase, positionArray, books, books.size());
+		
+		int count = 0;
+		MyBookcase mb = new MyBookcase(bookcase, books);
+		for (int i = 0; i < mb.getBookcase().getNumberOfShelves(); i++){
+			
+			for (int j = 0; j < mb.getBookcase().getBookshelf(i).getBookCount(); j++){
+				bookcase.addBook(i, mb.getBooks().get(count++));
+			}
+		}
 	}
 
 	private int populateBookcase(Bookcase bookcase, int[] positionArray, List<Book> books, int n){

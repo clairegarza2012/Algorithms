@@ -62,10 +62,14 @@ public class DynamicShelver implements Shelver{
 		}
 
 		populateBookcase(bookcase, positionArray, books, books.size());
+		
+		System.out.println(bookcase);
 	}
 
+	private int count = 0;
 	private int populateBookcase(Bookcase bookcase, int[] positionArray, List<Book> books, int n){
 
+		Book b = null;
 		int k = 0;
 		if (positionArray[n] == 1){
 			k = 1;
@@ -73,10 +77,12 @@ public class DynamicShelver implements Shelver{
 		else{
 			k = populateBookcase(bookcase, positionArray, books, positionArray[n] - 1) + 1;
 		}
-		for (int i = positionArray[n] - 1; i < n; i++){
-			bookcase.getBookshelf(k - 1).addBook(books.get(i));
+		for (int i = k; i <= n - 1; i++){
+			bookcase.getBookshelf(count).addBook(books.get(i));
 		}
+		count++;
 
+		System.out.println(n +  " " + k + " " + bookcase);
 		return k;
 	}
 }
