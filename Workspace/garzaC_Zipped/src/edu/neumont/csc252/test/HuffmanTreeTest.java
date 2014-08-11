@@ -20,6 +20,12 @@ public class HuffmanTreeTest {
 		compressor.compress(tree, string.getBytes());
 		
 		//printLeafs(root);
+		
+//		PriorityQueue<FrequencyNode> frequencies = tree.getFrequencies();
+//		
+//		while(frequencies.peek() != null){
+//			System.out.println(frequencies.poll());
+//		}
 	}
 	
 	private void printLeafs(FrequencyNode root){

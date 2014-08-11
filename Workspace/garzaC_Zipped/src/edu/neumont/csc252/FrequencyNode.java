@@ -9,7 +9,7 @@ public class FrequencyNode implements Comparable<FrequencyNode>{
 	
 	private double frequency = 0;
 	private byte[] value;
-	
+		
 	public FrequencyNode(double frequency, byte[] value){
 		
 		this.frequency = frequency;
@@ -42,17 +42,7 @@ public class FrequencyNode implements Comparable<FrequencyNode>{
 
 	@Override
 	public int compareTo(FrequencyNode o) {
-
-		int i = 0;
-		
-		if (this.frequency > o.frequency){
-			i = 1;
-		}
-		else if (this.frequency < o.frequency){
-			i = -1;
-		}
-		
-		return i;
+		return new Double(frequency).compareTo(new Double(o.frequency));
 	}
 
 	@Override
@@ -61,6 +51,5 @@ public class FrequencyNode implements Comparable<FrequencyNode>{
 				+ ", frequency=" + frequency + ", value="
 				+ Arrays.toString(value) + "]";
 	}
-	
 	
 }
