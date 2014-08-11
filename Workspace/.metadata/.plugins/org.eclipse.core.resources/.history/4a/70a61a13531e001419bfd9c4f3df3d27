@@ -1,0 +1,22 @@
+package edu.neumont.csc250;
+
+public class InsertBinaryTree {
+
+	public static void main(String[] args){
+		
+	}
+	
+	private static void insert(TreeNode root, Object k){
+		
+		if (root.data < k){
+			
+		}
+		else if (root.data > k){
+			
+		}
+		else{
+			
+		}
+		
+	}
+}

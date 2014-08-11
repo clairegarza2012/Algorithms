@@ -1,0 +1,44 @@
+package edu.neumont.csc252;
+
+public class TreeNode {
+
+	private TreeNode left = null;
+	private TreeNode right = null;
+	
+	private double frequency = 0;
+	private int value = 0;
+	
+	public TreeNode(int value){
+		
+		this.value = value;
+	}
+
+	public TreeNode getLeft() {
+		return left;
+	}
+
+	public void setLeft(TreeNode left) {
+		this.left = left;
+	}
+
+	public TreeNode getRight() {
+		return right;
+	}
+
+	public void setRight(TreeNode right) {
+		this.right = right;
+	}
+
+	public double getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(double frequency) {
+		this.frequency = frequency;
+	}
+
+	public int getValue() {
+		return value;
+	}
+
+}

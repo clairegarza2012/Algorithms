@@ -1,0 +1,44 @@
+package edu.neumont.csc252;
+
+public class FrequencyNode {
+
+	private FrequencyNode left = null;
+	private FrequencyNode right = null;
+	
+	private double frequency = 0;
+	private int value = 0;
+	
+	public FrequencyNode(int value){
+		
+		this.value = value;
+	}
+
+	public FrequencyNode getLeft() {
+		return left;
+	}
+
+	public void setLeft(FrequencyNode left) {
+		this.left = left;
+	}
+
+	public FrequencyNode getRight() {
+		return right;
+	}
+
+	public void setRight(FrequencyNode right) {
+		this.right = right;
+	}
+
+	public double getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(double frequency) {
+		this.frequency = frequency;
+	}
+
+	public int getValue() {
+		return value;
+	}
+
+}

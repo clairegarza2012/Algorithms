@@ -1,0 +1,27 @@
+package edu.neumont.csc252.test;
+
+import java.util.PriorityQueue;
+
+import org.junit.Test;
+
+import edu.neumont.csc252.FrequencyNode;
+import edu.neumont.csc252.HuffmanTree;
+
+public class HuffmanTreeTest {
+
+	@Test
+	public void test() {
+
+		String string = "Hello World!";
+
+		HuffmanTree tree = new HuffmanTree(string.getBytes());
+
+		PriorityQueue<FrequencyNode> nodes = tree.getFrequencies();
+
+//		int size = nodes.size();
+//		for (int i = 0 ; i < size; i++){
+//			System.out.println(nodes.poll());
+//		}
+	}
+
+}

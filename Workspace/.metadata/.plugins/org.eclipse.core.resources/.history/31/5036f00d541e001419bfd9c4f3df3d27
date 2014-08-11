@@ -1,0 +1,15 @@
+package edu.neumont.csc250;
+
+public class TreeNode<T> implements Comparable<T>{
+
+	public T data;
+	public TreeNode<T> leftDecsendent;
+	public TreeNode<T> rightDecsendent;
+	
+	
+	@Override
+	public int compareTo(T arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

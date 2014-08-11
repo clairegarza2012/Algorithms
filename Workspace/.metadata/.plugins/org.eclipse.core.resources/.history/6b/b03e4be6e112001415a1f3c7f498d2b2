@@ -1,8 +1,0 @@
-package edu.neumont.csc250;
-
-import edu.neumont.util.Server;
-
-public class MyServer extends Server{
-
-	
-}
