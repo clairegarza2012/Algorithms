@@ -1,0 +1,73 @@
+package edu.neumont.csc252.test;
+
+import org.junit.Test;
+import edu.neumont.csc252.FrequencyNode;
+import edu.neumont.csc252.HuffmanCompressor;
+import edu.neumont.csc252.HuffmanTree;
+import edu.neumont.io.Bits;
+
+public class HuffmanTreeTest {
+
+	@Test
+	public void test() {
+
+		String string = "Hello World!";
+
+		HuffmanTree tree = new HuffmanTree(string.getBytes());
+
+		FrequencyNode root = tree.getRoot();
+
+		HuffmanCompressor compressor = new HuffmanCompressor();
+		byte[] bytes = compressor.compress(tree, string.getBytes());
+
+		System.out.println();
+		Bits bits = new Bits();
+		for (byte b : bytes){
+			String bString = Integer.toBinaryString((b+256)%256);
+
+			while (bString.length() < 8){
+				bString = 0 + "" + bString;
+			}
+
+			for (Character c: bString.toCharArray()){
+				if (c.equals(1)){
+					bits.add(true);
+				}else{
+					bits.add(false);
+				}
+			}
+		}
+
+		byte[] bytes2 = new byte[bits.size()/8];
+		while (bits.peek() != null){
+			tree.toByte(bits);
+		}
+
+		for (byte b : bytes2){
+			System.out.println(b);
+		}
+
+		//printLeafs(tree, root);
+
+		//		PriorityQueue<FrequencyNode> frequencies = tree.getFrequencies();
+		//		
+		//		while(frequencies.peek() != null){
+		//			System.out.println(frequencies.poll());
+		//		}
+	}
+
+	private void printLeafs(HuffmanTree tree, FrequencyNode root){
+
+		if (root.getValue().length <= 1){
+			System.out.println(root.toString());
+			Bits b = new Bits();
+			tree.fromByte(root.getValue()[0], b);
+			System.out.println(b);
+			return;
+		}
+
+		printLeafs(tree, root.getLeft());
+		printLeafs(tree, root.getRight());
+	}
+
+}

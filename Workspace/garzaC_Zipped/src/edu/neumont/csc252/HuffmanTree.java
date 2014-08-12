@@ -36,15 +36,54 @@ public class HuffmanTree {
 
 			frequencies.add(root);
 		}
-		
+
 	}
 
 	public byte toByte(Bits bits){
+		// turn 1100 into h
+		byte b = toByteHelper(root, bits);
+		return b;
+	}
 
-		return (Byte) null;
+	private byte toByteHelper(FrequencyNode root, Bits bits) {
+
+		if (root.getValue().length == 1){
+			return root.getValue()[0];
+		}
+
+		if(bits.poll()){
+			return toByteHelper(root.getRight(), bits);
+		}else{
+			return toByteHelper(root.getLeft(), bits);
+		}
 	}
 
 	public void fromByte(byte b, Bits bits){
+		// take h turn into 1100
+		fromByteHelper(root, b, bits);
+	}
+
+	private void fromByteHelper(FrequencyNode root, byte b, Bits bits){
+
+		if (root.getValue().length == 1){
+			return;
+		}
+
+		byte[] bytes = root.getLeft().getValue();
+		for (byte by: bytes){
+			if (by == b){
+				bits.add(false);
+				fromByteHelper(root.getLeft(), b, bits);
+			}
+		}
+
+		bytes = root.getRight().getValue();
+		for (byte by: bytes){
+			if (by == b){
+				bits.add(true);
+				fromByteHelper(root.getRight(), b, bits);
+			}
+		}
 
 	}
 
@@ -70,11 +109,4 @@ public class HuffmanTree {
 		}
 	}
 
-	public PriorityQueue<FrequencyNode> getFrequencies(){
-		return frequencies;
-	}
-	
-	public FrequencyNode getRoot(){
-		return root;
-	}
 }

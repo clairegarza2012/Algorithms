@@ -1,0 +1,32 @@
+package edu.neumont.csc252;
+
+import edu.neumont.io.Bits;
+
+public class HuffmanCompressor {
+
+	public byte[] compress(HuffmanTree tree, byte[] b){
+
+		byte[] compressed = new byte[b.length];
+		Bits bits = new Bits();
+		
+		for (int i = 0; i < b.length; i++){
+			Bits temp = new Bits();
+			tree.fromByte(b[i], temp);
+			bits.addAll(temp);
+		}
+
+		return compressed;
+	}
+
+	public byte[] decompress(HuffmanTree tree, int uncompressedLength, byte[] b){
+
+		byte[] deCompressed = new byte[b.length];
+		
+		for (int i = 0; i < b.length; i++){
+
+		}
+		
+		return deCompressed;
+	}
+
+}
