@@ -11,6 +11,7 @@ public class HuffmanTree {
 	public HuffmanTree(byte[] b) {
 
 		this.setFrequency(b);
+
 		this.makeTree();
 	}
 
