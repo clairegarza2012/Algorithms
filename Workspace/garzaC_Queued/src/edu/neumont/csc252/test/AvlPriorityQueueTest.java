@@ -67,7 +67,19 @@ public class AvlPriorityQueueTest {
 		
 		tree.printTree(); // prints out as pre-order traversal
 		
-		System.out.println(tree.size());
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		
+		tree.printTree();
 		
 //		AvlBasedPriorityQueue<Integer> queue = new AvlBasedPriorityQueue<>();
 //		

@@ -98,7 +98,7 @@ public class AVLTree<T extends Comparable<T>> {
 		if (root.getBalanceFactor() >= 2){
 
 			if (root.getLeft().getBalanceFactor() == -1){
-
+				System.out.println("Left-Right Rotation");
 				AVLNode<T> leftSub = root.getLeft().getRight();
 				AVLNode<T> rightSub = root.getLeft();
 				AVLNode<T> prevRoot = root;
@@ -130,7 +130,8 @@ public class AVLTree<T extends Comparable<T>> {
 				}
 			}
 			else if (root.getLeft().getBalanceFactor() == 1){
-				
+
+				System.out.println("Left Rotation");
 				AVLNode<T> leftSub = root.getLeft();
 				AVLNode<T> prevRoot = root;
 
@@ -146,7 +147,7 @@ public class AVLTree<T extends Comparable<T>> {
 				else{
 					root = leftSub;
 					root.setRight(prevRoot);
-					
+
 					if (goLeft){
 						parent.setLeft(root);
 					}
@@ -157,7 +158,7 @@ public class AVLTree<T extends Comparable<T>> {
 			}
 		}
 		else if (root.getBalanceFactor() <= -2){
-
+			System.out.println("Right rotation");
 			if (root.getRight().getBalanceFactor() == -1){
 
 				AVLNode<T> leftSub = root.getRight();
@@ -186,7 +187,7 @@ public class AVLTree<T extends Comparable<T>> {
 
 			}
 			else if (root.getRight().getBalanceFactor() == 1){
-
+				System.out.println("Right-Left rotation");
 				AVLNode<T> leftSub = root.getRight().getLeft();
 				AVLNode<T> rightSub = root.getRight();
 				AVLNode<T> prevRoot = root;
@@ -226,7 +227,15 @@ public class AVLTree<T extends Comparable<T>> {
 
 	public T delete(){
 
-		return deleteHelper(root, null, this.getSmallest()).getValue();
+		if(root == null){
+			return null;
+		}
+		
+		T temp = deleteHelper(root, null, this.getSmallest()).getValue();
+		this.balanceTree(root, null);
+		this.balancer(root, null, true);
+		
+		return temp;
 	}
 
 	private AVLNode<T> deleteHelper(AVLNode<T> root, AVLNode<T> parent, AVLNode<T> node) {
