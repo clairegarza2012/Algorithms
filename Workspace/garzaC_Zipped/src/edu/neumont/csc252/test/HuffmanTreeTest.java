@@ -1,28 +1,36 @@
 package edu.neumont.csc252.test;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Arrays;
+
 import org.junit.Test;
-import edu.neumont.csc252.FrequencyNode;
+
 import edu.neumont.csc252.HuffmanCompressor;
 import edu.neumont.csc252.HuffmanTree;
-import edu.neumont.io.Bits;
 
 public class HuffmanTreeTest {
 
 	@Test
-	public void test() {
-
-		String string = "Hello World!";
-
-		HuffmanTree tree = new HuffmanTree(string.getBytes());
-
-		HuffmanCompressor compressor = new HuffmanCompressor();
-		byte[] bytes = compressor.compress(tree, string.getBytes());
-
-		byte[] bytes2 = compressor.decompress(tree, string.length(), bytes);
+	public void test(){
 		
-		for (byte b : bytes2){
-			System.out.print((char)((int)b));
+		String string = "Hello World!";//"Hello World!";
+		byte[] originalBytes = string.getBytes();//Files.readAllBytes(Paths.get("jcMessage.png"));//string.getBytes();
+		
+		HuffmanTree tree = new HuffmanTree(originalBytes);
+		
+		HuffmanCompressor hm = new HuffmanCompressor();
+		byte[] compressedBytes = hm.compress(tree, originalBytes);
+		byte[] decompressedBytes = hm.decompress(tree, string.length()*2, compressedBytes);
+
+		for (int i = 0; i < originalBytes.length; i++){
+
+			System.out.println(i + ": " + (char)originalBytes[i] + " " + (char)decompressedBytes[i]);
 		}
 		
+		System.out.println(Arrays.toString(decompressedBytes));
+		
 	}
+	
 }

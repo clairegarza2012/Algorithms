@@ -1,0 +1,51 @@
+package edu.neumont.csc252.test;
+
+import org.junit.Test;
+
+import edu.neumont.csc252.AVLNode;
+import edu.neumont.csc252.AVLTree;
+import edu.neumont.csc252.AvlBasedPriorityQueue;
+import edu.neumont.csc252.HeapBasedPriorityQueue;
+
+public class AvlPriorityQueueTest {
+
+	@Test
+	public void test() {
+		
+//		HeapBasedPriorityQueue<Integer> heap = new HeapBasedPriorityQueue<>();
+//		heap.offer(3);
+//		heap.offer(4);
+//		heap.offer(2);
+//		heap.offer(5);
+//		heap.offer(7);
+//		heap.offer(1);
+//		heap.offer(6);
+//		
+//		while (heap.peek() != null){
+//			System.out.println(heap.poll());
+//		}
+		
+//		AVLTree<Integer> tree = new AVLTree<>();
+//		
+//		tree.insert(new AVLNode<Integer>(5));
+//		tree.insert(new AVLNode<Integer>(3));
+//		tree.insert(new AVLNode<Integer>(4));
+//		tree.insert(new AVLNode<Integer>(2));
+//		
+//		tree.printTree();
+		
+		AvlBasedPriorityQueue<Integer> queue = new AvlBasedPriorityQueue<>();
+		
+		queue.offer(5);
+		System.out.println(queue.peek());
+
+		queue.offer(3);
+		System.out.println(queue.peek());
+
+		queue.offer(4);
+
+		queue.offer(2);
+
+	}
+
+}

@@ -8,22 +8,29 @@ public class HuffmanCompressor {
 
 		Bits bits = new Bits();
 
+		// turn all bytes into bits
 		for (int i = 0; i < b.length; i++){
 			Bits temp = new Bits();
 			tree.fromByte(b[i], temp);
 			bits.addAll(temp);
 		}
 
+		// This adds padding to the end of the last byte
 		while (bits.size() % 8 != 0){
 			bits.add(false);
 		}
 		
+		// Makes sure the compressed byte[] length is only as long as it can be (bits size / 8)
 		byte[] compressed = new byte[bits.size() / 8];
 
+		// keeps track of the 0's and 1's in the current byte
 		String bitsString = "";
+		// makes sure the byte is 8 bits long
 		int count = 1;
+		// keeps track of the next index for the compressed byte[]
 		int compressedIndex = 0;
 
+		// stores bits into byte[]
 		while (bits.peek() != null){
 
 			if (bits.poll()){
@@ -49,12 +56,10 @@ public class HuffmanCompressor {
 		byte[] decompressed = new byte[uncompressedLength];
 
 		Bits bits = new Bits();
+		// get all bytes and turn into bits
 		for (byte byte1 : b){
-			String bString = Integer.toBinaryString((byte1+256)%256);
-
-			while (bString.length() < 8){
-				bString = 0 + "" + bString;
-			}
+			// turns the byte into a binary string of length 8
+			String bString = Integer.toBinaryString(byte1 & 255 | 256).substring(1);
 
 			for (Character c: bString.toCharArray()){
 				if (c == 49){
@@ -65,6 +70,7 @@ public class HuffmanCompressor {
 			}
 		}
 		
+		// for all bits figure out what the original bytes are
 		for (int i = 0; i < decompressed.length; i++){
 			
 			byte byte1 = tree.toByte(bits);

@@ -1,0 +1,181 @@
+package edu.neumont.csc252;
+
+public class AVLTree<T extends Comparable<T>> {
+
+	private AVLNode<T> root = null;
+
+	public AVLTree(){ }
+
+	public boolean insert(T t){
+
+		AVLNode<T> node = new AVLNode<>(t);
+		if (root == null){
+			root = node;
+		}
+		else {
+			insertNode(root, node);
+		}
+		return true;
+	}
+
+	private boolean insertNode(AVLNode<T> root, AVLNode<T> node){
+		if(root.compareTo(node) == 0){
+			return false;
+		}
+
+		if (root.getLeft() == null && root.getRight() == null){
+			if (root.compareTo(node) > 0){
+				root.setLeft(node);
+			}else if (root.compareTo(node) < 0){
+				root.setRight(node);
+			}
+			return true;
+		}
+
+		if (root.compareTo(node) > 0){
+			if (root.getLeft() == null){
+				root.setLeft(node);
+				return true;
+			}
+			return insertNode(root.getLeft(), node);
+		}else if (root.compareTo(node) < 0){
+			if (root.getRight() == null){
+				root.setRight(node);
+				return true;
+			}
+			return insertNode(root.getRight(), node);
+		}
+
+		return false;
+	}
+
+	private void balanceTree(){
+
+		// If leaf 
+			// height = 0, balance factor = 0
+		
+		// If balance factor is >= 2 
+		
+		// If balance factor is <= -2
+		
+		// Balance Factor: height of right-subtree minus the height  of left sub-tree
+		
+	}
+
+	public T delete(){
+
+		return deleteHelper(root, null, this.getSmallest()).getValue();
+	}
+
+	private AVLNode<T> deleteHelper(AVLNode<T> root, AVLNode<T> parent, AVLNode<T> node) {
+
+		if (root == null){
+			return null;
+		}
+		else if (root.getLeft() == null && root.getRight() == null){
+			if (parent == null){
+				AVLNode<T> temp = root;
+				root = null;
+				this.root = null;
+				return temp;
+			}else{
+				parent.setLeft(null);
+				return root;
+			}
+		}
+		else if (root.getLeft() == null){
+			AVLNode<T> temp = root;
+			if (parent == null){
+				this.root = root.getRight();
+				return temp;
+			}
+			parent.setLeft(temp.getRight());
+			return temp;
+		}
+
+		return deleteHelper(root.getLeft(), root, node);
+	}
+
+	public AVLNode<T> getSmallest(){
+
+		if (root == null){
+			return null;
+		}
+		return getSmallestValue(root);
+	}
+
+	private AVLNode<T> getSmallestValue(AVLNode<T> root){
+
+		if (root.getLeft() == null && root.getRight() == null){
+			return root;
+		}
+		else if (root.getLeft() == null){
+			return root;
+		}
+		return getSmallestValue(root.getLeft());
+	}
+
+	public void printTree(){
+		printHelper(root);
+	}
+
+	private void printHelper(AVLNode<T> root){
+
+		if (root == null){
+			return;
+		}
+		if(root.getLeft() == null && root.getRight() == null){
+			System.out.println(root.toString());
+			return;
+		}
+		printHelper(root.getLeft());
+		System.out.println(root.toString());
+		printHelper(root.getRight());
+	}
+
+	public int size(){
+		int i = 0;
+		sizeHelper(root, 0);
+		return i;
+	}
+	
+	public void sizeHelper(AVLNode<T> root, int size){
+		
+		if (root == null){
+			return;
+		}
+		if (root.getLeft() == null && root.getRight() == null){
+			size += 1;
+			return;
+		}
+		
+		sizeHelper(root.getLeft() ,size + 1);
+		sizeHelper(root.getRight(), size + 1);
+		
+	}
+
+	//	public boolean search(AVLNode<T> node){
+	//		
+	//		return searchTree(root, node) != null;
+	//	}
+	//	
+	//	private AVLNode<T> searchTree(AVLNode<T> root, AVLNode<T> node){
+	//		
+	//		if (root.compareTo(node) == 0){
+	//			return root;
+	//		}
+	//		else if (root.getLeft() == null && root.getRight() == null){
+	//			return null;
+	//		}
+	//		
+	//		if (root.compareTo(node) < 0){
+	//			return searchTree(root.getLeft(), node);
+	//		}
+	//		else if (root.compareTo(node) > 0){
+	//			return searchTree(root.getRight(), node);
+	//		}
+	//		
+	//		return null;
+	//	}
+
+}

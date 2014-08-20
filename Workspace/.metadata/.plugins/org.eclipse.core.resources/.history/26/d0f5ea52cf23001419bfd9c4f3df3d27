@@ -1,0 +1,33 @@
+package edu.neumont.csc252;
+
+public class Heap<T extends Comparable<T>> {
+
+	private T[] heap;
+	private int index = 1;
+	
+	@SuppressWarnings("unchecked")
+	public Heap(){
+		
+		heap = (T[]) new Object[8];
+	}
+	
+	public void insert(T t){
+		
+		heap[index++] = t;
+		
+		if (index > 1){
+			// check if t is bigger than the value at parent
+		}
+	}
+	
+	public void delete(T t){
+		
+		for (int i = 0; i < index; i++){
+			if (heap[i].compareTo(t) == 0){
+				heap[i] = null;
+			}
+		}
+		
+	}
+	
+}

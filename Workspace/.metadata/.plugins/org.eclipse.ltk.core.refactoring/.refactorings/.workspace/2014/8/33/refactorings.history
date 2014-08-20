@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;TempName&apos; to &apos;garzaC_Queued&apos;&#x0D;&#x0A;- Original element: &apos;TempName&apos;&#x0D;&#x0A;- Renamed element: &apos;TempName&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;TempName&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=TempName" name="garzaC_Queued" references="true" stamp="1408032200011" version="1.0"/>
+</session>

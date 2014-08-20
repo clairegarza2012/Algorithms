@@ -1,0 +1,20 @@
+package edu.neumont.csc252;
+
+public class AVLTree {
+
+	private AVLNode root;
+	
+	public AVLTree(){
+		
+	}
+	
+	public boolean insert(AVLNode node){
+		
+		return false;
+	}
+	
+	public boolean remove(AVLNode node){
+		
+		return false;
+	}
+}
