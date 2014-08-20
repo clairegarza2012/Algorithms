@@ -15,8 +15,8 @@ public class HuffmanTreeTest {
 	@Test
 	public void test(){
 		
-		String string = "Hello World!";
-		byte[] originalBytes = string.getBytes();
+		String string = "Hello World!";//"Hello World!";
+		byte[] originalBytes = string.getBytes();//Files.readAllBytes(Paths.get("jcMessage.png"));//string.getBytes();
 		
 		HuffmanTree tree = new HuffmanTree(originalBytes);
 		
