@@ -15,6 +15,7 @@ public class AvlPriorityQueueTest {
 	@Test
 	public void test() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		//		Heap<Integer> heap = new Heap<>();
 		//		
@@ -74,6 +75,8 @@ public class AvlPriorityQueueTest {
 		tree.printTree();
 		System.out.println("Height: " + tree.height());
 		System.out.println("Balance Factor: " + tree.balance());
+=======
+>>>>>>> parent of e4d40ea... changes made to balacing
 =======
 >>>>>>> parent of e4d40ea... changes made to balacing
 		
