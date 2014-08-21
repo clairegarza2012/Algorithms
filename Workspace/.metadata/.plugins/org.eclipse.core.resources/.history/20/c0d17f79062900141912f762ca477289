@@ -6,19 +6,6 @@ public class AVLTree<T extends Comparable<T>> {
 
 	public AVLTree(){ }
 
-	public int height() {
-		return height(root);
-	}
-
-	private int height(AVLNode<T> root) {
-		if ( root == null ) return -1;
-		return Math.max(height(root.getRight()), height(root.getLeft())) + 1;
-	}
-
-	public int balance() {
-		return height(root.getLeft()) - height(root.getRight());
-	}
-
 	public boolean insert(T t){
 
 		AVLNode<T> node = new AVLNode<>(t);
@@ -29,7 +16,7 @@ public class AVLTree<T extends Comparable<T>> {
 			insertNode(root, node);
 		}
 		this.balanceTree(root, null);
-		//this.balancer(root, null, true);
+		this.balancer(root, null, true);
 
 		return true;
 	}
@@ -68,44 +55,27 @@ public class AVLTree<T extends Comparable<T>> {
 			return;
 		}
 		if (root.getLeft() == null && root.getRight() == null){
-			root.setHeight(0);
+			root.setHeight(1);
 			root.setBalanceFactor(0);
 			return;
 		}
 
 		int leftHeight = 0;
 		if (root.getLeft() != null){
-			leftHeight = this.height(root.getLeft());
+			leftHeight = this.sizeHelper(root.getLeft(), 0);
 		}
 		int rightHeight = 0;
 		if (root.getRight() != null){
-			rightHeight = this.height(root.getRight());
+			rightHeight = this.sizeHelper(root.getRight(), 0);
 		}
 
 		int balanceFactor = leftHeight - rightHeight;
 		root.setBalanceFactor(balanceFactor);
-		root.setHeight(this.height(root));
-
-		this.balanceHelper(root, parent, Math.max(leftHeight, rightHeight) == leftHeight);
-		//this.balanceHelper(root, parent, Math.max(leftHeight, rightHeight) == leftHeight);
+		root.setHeight(Math.max(leftHeight, rightHeight) + 1);
 
 		balanceTree(root.getLeft(), root);
 		balanceTree(root.getRight(), root);
 
-		leftHeight = 0;
-		if (root.getLeft() != null){
-			leftHeight = this.height(root.getLeft());
-		}
-		rightHeight = 0;
-		if (root.getRight() != null){
-			rightHeight = this.height(root.getRight());
-		}
-
-		balanceFactor = leftHeight - rightHeight;
-		root.setBalanceFactor(balanceFactor);
-		root.setHeight(this.height(root));
-
-		this.balanceHelper(root, parent, Math.max(leftHeight, rightHeight) == leftHeight);
 	}
 
 	private void balancer(AVLNode<T> root, AVLNode<T> parent, boolean goLeft){
@@ -259,11 +229,11 @@ public class AVLTree<T extends Comparable<T>> {
 		if(root == null){
 			return null;
 		}
-
+		
 		T temp = deleteHelper(root, null, this.getSmallest()).getValue();
 		this.balanceTree(root, null);
 		this.balancer(root, null, true);
-
+		
 		return temp;
 	}
 
@@ -331,7 +301,6 @@ public class AVLTree<T extends Comparable<T>> {
 		System.out.println(root.toString());
 		printHelper(root.getLeft());
 		printHelper(root.getRight());
-
 	}
 
 	public int size(){
