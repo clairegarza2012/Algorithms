@@ -73,11 +73,11 @@ public class AVLTree<T extends Comparable<T>> {
 			return;
 		}
 
-		int leftHeight = -1;
+		int leftHeight = 0;
 		if (root.getLeft() != null){
 			leftHeight = this.height(root.getLeft());
 		}
-		int rightHeight = -1;
+		int rightHeight = 0;
 		if (root.getRight() != null){
 			rightHeight = this.height(root.getRight());
 		}
@@ -88,11 +88,11 @@ public class AVLTree<T extends Comparable<T>> {
 		balanceTree(root.getLeft(), root);
 		//this.balanceHelper(root, parent, true);
 
-		leftHeight = -1;
+		leftHeight = 0;
 		if (root.getLeft() != null){
 			leftHeight = this.height(root.getLeft());
 		}
-		rightHeight = -1;
+		rightHeight = 0;
 		if (root.getRight() != null){
 			rightHeight = this.height(root.getRight());
 		}
@@ -112,11 +112,11 @@ public class AVLTree<T extends Comparable<T>> {
 			return;
 		}
 		
-		int leftHeight = -1;
+		int leftHeight = 0;
 		if (root.getLeft() != null){
 			leftHeight = this.height(root.getLeft());
 		}
-		int rightHeight = -1;
+		int rightHeight = 0;
 		if (root.getRight() != null){
 			rightHeight = this.height(root.getRight());
 		}
@@ -127,11 +127,11 @@ public class AVLTree<T extends Comparable<T>> {
 		balancer(root.getLeft(), root, true);
 		balanceHelper(root, parent, goLeft);
 
-		leftHeight = -1;
+		leftHeight = 0;
 		if (root.getLeft() != null){
 			leftHeight = this.height(root.getLeft());
 		}
-		rightHeight = -1;
+		rightHeight = 0;
 		if (root.getRight() != null){
 			rightHeight = this.height(root.getRight());
 		}
