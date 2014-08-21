@@ -87,7 +87,7 @@ public class AVLTree<T extends Comparable<T>> {
 		root.setHeight(this.height(root));
 
 		this.balanceHelper(root, parent, Math.max(leftHeight, rightHeight) == leftHeight);
-		this.balanceHelper(root, parent, Math.max(leftHeight, rightHeight) == leftHeight);
+		//this.balanceHelper(root, parent, Math.max(leftHeight, rightHeight) == leftHeight);
 
 		balanceTree(root.getLeft(), root);
 		balanceTree(root.getRight(), root);
