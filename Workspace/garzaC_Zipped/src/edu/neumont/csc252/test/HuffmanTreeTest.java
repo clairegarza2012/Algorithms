@@ -16,13 +16,13 @@ public class HuffmanTreeTest {
 	public void test(){
 		
 		String string = "Hello World!";
-		byte[] originalBytes = string.getBytes();
+		byte[] originalBytes = new byte[]{ -45, 12, 34, 45, -67, 12, -23 };
 		
 		HuffmanTree tree = new HuffmanTree(originalBytes);
 		
 		HuffmanCompressor hm = new HuffmanCompressor();
 		byte[] compressedBytes = hm.compress(tree, originalBytes);
-		byte[] decompressedBytes = hm.decompress(tree, string.length()*2, compressedBytes);
+		byte[] decompressedBytes = hm.decompress(tree, originalBytes.length, compressedBytes);
 
 		for (int i = 0; i < originalBytes.length; i++){
 

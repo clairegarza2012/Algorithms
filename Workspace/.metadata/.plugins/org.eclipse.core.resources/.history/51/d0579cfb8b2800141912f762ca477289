@@ -1,0 +1,36 @@
+package edu.neumont.csc250;
+
+public class Graphs {
+
+	private int[][] matrix;
+	private int[] marks;
+	
+	public Graphs(int n){
+		matrix = new int[n][n];
+		marks = new int[n];
+	}
+	
+	public int vCount(){
+		return marks.length;
+	}
+	
+	public int first(int v){
+		
+		for (int i = 0; i < vCount(); i++){
+			if (matrix[v][i] != 0){
+				return i;
+			}
+		}
+		return vCount();
+	}
+	
+	public int next(int v, int x){
+		
+		for (int i = 0; i < vCount(); i++){
+			if (matrix[x][i] != 0){
+				return i;
+			}
+		}
+		return vCount();
+	}
+}
