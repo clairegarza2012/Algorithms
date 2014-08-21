@@ -29,7 +29,7 @@ public class AVLTree<T extends Comparable<T>> {
 			insertNode(root, node);
 		}
 		this.balanceTree(root, null);
-		//this.balancer(root, null, true);
+		this.balancer(root, null, true);
 
 		return true;
 	}
@@ -81,16 +81,12 @@ public class AVLTree<T extends Comparable<T>> {
 		if (root.getRight() != null){
 			rightHeight = this.height(root.getRight());
 		}
-
 		int balanceFactor = leftHeight - rightHeight;
 		root.setBalanceFactor(balanceFactor);
 		root.setHeight(this.height(root));
-
-		this.balanceHelper(root, parent, Math.max(leftHeight, rightHeight) == leftHeight);
-		this.balanceHelper(root, parent, Math.max(leftHeight, rightHeight) == leftHeight);
-
+		
 		balanceTree(root.getLeft(), root);
-		balanceTree(root.getRight(), root);
+		//this.balanceHelper(root, parent, true);
 
 		leftHeight = 0;
 		if (root.getLeft() != null){
@@ -100,26 +96,50 @@ public class AVLTree<T extends Comparable<T>> {
 		if (root.getRight() != null){
 			rightHeight = this.height(root.getRight());
 		}
-
 		balanceFactor = leftHeight - rightHeight;
 		root.setBalanceFactor(balanceFactor);
 		root.setHeight(this.height(root));
 
-		this.balanceHelper(root, parent, Math.max(leftHeight, rightHeight) == leftHeight);
+		balanceTree(root.getRight(), root);
+		//this.balanceHelper(root, parent, false);
 	}
 
 	private void balancer(AVLNode<T> root, AVLNode<T> parent, boolean goLeft){
-
 		if (root == null){
 			return;
 		}
 		if (root.getLeft() == null && root.getRight() == null){
 			return;
 		}
+		
+		int leftHeight = 0;
+		if (root.getLeft() != null){
+			leftHeight = this.height(root.getLeft());
+		}
+		int rightHeight = 0;
+		if (root.getRight() != null){
+			rightHeight = this.height(root.getRight());
+		}
+		int balanceFactor = leftHeight - rightHeight;
+		root.setBalanceFactor(balanceFactor);
+		root.setHeight(this.height(root));
 
 		balanceHelper(root, parent, goLeft);
-
 		balancer(root.getLeft(), root, true);
+
+		leftHeight = 0;
+		if (root.getLeft() != null){
+			leftHeight = this.height(root.getLeft());
+		}
+		rightHeight = 0;
+		if (root.getRight() != null){
+			rightHeight = this.height(root.getRight());
+		}
+		balanceFactor = leftHeight - rightHeight;
+		root.setBalanceFactor(balanceFactor);
+		root.setHeight(this.height(root));
+		
+		balanceHelper(root, parent, goLeft);
 		balancer(root.getRight(), root, false);
 	}
 
@@ -349,29 +369,5 @@ public class AVLTree<T extends Comparable<T>> {
 
 		return sizeHelper(root.getLeft(), size) + sizeHelper(root.getRight(), size) + 1;
 	}
-
-	//	public boolean search(AVLNode<T> node){
-	//		
-	//		return searchTree(root, node) != null;
-	//	}
-	//	
-	//	private AVLNode<T> searchTree(AVLNode<T> root, AVLNode<T> node){
-	//		
-	//		if (root.compareTo(node) == 0){
-	//			return root;
-	//		}
-	//		else if (root.getLeft() == null && root.getRight() == null){
-	//			return null;
-	//		}
-	//		
-	//		if (root.compareTo(node) < 0){
-	//			return searchTree(root.getLeft(), node);
-	//		}
-	//		else if (root.compareTo(node) > 0){
-	//			return searchTree(root.getRight(), node);
-	//		}
-	//		
-	//		return null;
-	//	}
 
 }
