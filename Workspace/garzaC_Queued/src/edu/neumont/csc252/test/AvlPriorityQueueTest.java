@@ -1,15 +1,20 @@
 package edu.neumont.csc252.test;
 
-import java.util.Random;
+import java.util.Iterator;
 
 import org.junit.Test;
 
+import edu.neumont.csc252.AVLNode;
 import edu.neumont.csc252.AVLTree;
+import edu.neumont.csc252.AvlBasedPriorityQueue;
+import edu.neumont.csc252.Heap;
+import edu.neumont.csc252.HeapBasedPriorityQueue;
 
 public class AvlPriorityQueueTest {
 
 	@Test
 	public void test() {
+<<<<<<< HEAD
 
 		//		Heap<Integer> heap = new Heap<>();
 		//		
@@ -69,67 +74,90 @@ public class AvlPriorityQueueTest {
 		tree.printTree();
 		System.out.println("Height: " + tree.height());
 		System.out.println("Balance Factor: " + tree.balance());
+=======
+>>>>>>> parent of e4d40ea... changes made to balacing
 		
-		
-//		tree.delete();
+//		Heap<Integer> heap = new Heap<>();
 //		
-//		System.out.println();
-//		
-//		tree.printTree();
-//		
-//		System.out.println("\nRight-Left Rotation:");
-//		AVLTree<Integer> tree1 = new AVLTree<>();
+//		heap.insert(4);
+//		heap.insert(1);
+//		heap.insert(3);
+//		heap.insert(2);
+//		heap.insert(6);
+//		heap.insert(8);
+//		heap.insert(7);
+//		heap.insert(5);
+//		heap.insert(9);
 //
-//		tree1.insert(3);
-//		tree1.insert(5);
-//		tree1.insert(4);
+//		System.out.println(heap.size());
 //		
-//		tree1.printTree();
+//		Iterator<Integer> it = heap.getIterator();
+//		while (it.hasNext()){
+//			System.out.print(it.next() + ", " + heap.size());
+//		}
 //		
-//		System.out.println("\nRight Rotation:");
-//		AVLTree<Integer> tree2 = new AVLTree<>();
+//		HeapBasedPriorityQueue<Integer> heap = new HeapBasedPriorityQueue<>();
+//		heap.offer(3);
+//		heap.offer(4);
+//		heap.offer(2);
+//		heap.offer(5);
+//		heap.offer(7);
+//		heap.offer(1);
+//		heap.offer(6);
 //		
-//		tree2.insert(5);
-//		tree2.insert(4);
-//		tree2.insert(3);
+//		System.out.println(heap.size());
 //		
-//		tree2.printTree();
-//		
-//		System.out.println("\nLeft Rotation:");
-//		AVLTree<Integer> tree3 = new AVLTree<>();
-//		
-//		tree3.insert(3);
-//		tree3.insert(4);
-//		tree3.insert(5);
-//		
-//		tree3.printTree();
-//		
-//		System.out.println("\nLeft-Right Rotation:");
-//		AVLTree<Integer> tree4 = new AVLTree<>();
-//		
-//		tree4.insert(5);
-//		tree4.insert(3);
-//		tree4.insert(4);
-//		
-//		tree4.printTree();
+//		while (heap.peek() != null){
+//			System.out.println(heap.poll() + ", " + heap.size() );
+//		}
 		
-		 // prints out as pre-order traversal
-
-		//		AvlBasedPriorityQueue<Integer> queue = new AvlBasedPriorityQueue<>();
-		//		
-		//		queue.offer(1);
-		//		queue.offer(2);
-		//		queue.offer(3);
-		//		queue.offer(4);
-		//		queue.offer(5);
-		//		queue.offer(6);
-		//
-		//		System.out.println(queue.poll());
-		//		System.out.println(queue.poll());
-		//		System.out.println(queue.poll());
-		//		System.out.println(queue.poll());
-		//		System.out.println(queue.poll());
-		//		System.out.println(queue.poll());
+		AVLTree<Integer> tree = new AVLTree<>();
+		
+		tree.insert(5);
+		tree.insert(3);
+		tree.insert(4);
+		tree.insert(6);		
+		tree.insert(7);
+		tree.insert(2);
+		tree.insert(1);
+		tree.insert(8);
+		tree.insert(9);
+		tree.insert(10);
+		tree.insert(11);
+		tree.insert(12);
+		tree.insert(13);
+		
+		tree.printTree(); // prints out as pre-order traversal
+		
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		tree.delete();
+		
+		tree.printTree();
+		
+//		AvlBasedPriorityQueue<Integer> queue = new AvlBasedPriorityQueue<>();
+//		
+//		queue.offer(1);
+//		queue.offer(2);
+//		queue.offer(3);
+//		queue.offer(4);
+//		queue.offer(5);
+//		queue.offer(6);
+//
+//		System.out.println(queue.poll());
+//		System.out.println(queue.poll());
+//		System.out.println(queue.poll());
+//		System.out.println(queue.poll());
+//		System.out.println(queue.poll());
+//		System.out.println(queue.poll());
 
 
 	}
