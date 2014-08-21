@@ -710,3 +710,489 @@ Binding(ALT+SHIFT+ARROW_DOWN,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.mylyn.tasks.ui.views.tasks,,,system)
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.489
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:236)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.490
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.497
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:236)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.497
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.504
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:236)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.504
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.510
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:236)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.510
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.521
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:391)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:314)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.521
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.526
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:391)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:314)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.527
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.535
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:391)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:314)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.536
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.545
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:391)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:314)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.546
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.567
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:236)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.567
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.576
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:236)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.576
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.582
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:236)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.583
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.589
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:236)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.589
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.601
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:391)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:314)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.601
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.607
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:391)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:314)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.607
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.612
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:391)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:314)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.613
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 1 2014-08-21 01:34:08.618
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:391)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:314)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2014-08-21 01:34:08.618
+!MESSAGE Resource is out of sync with the file system: '/garzaC_Queued/src/edu/neumont/csc252/test/AvlPriorityQueueTest.java'.
+
+!ENTRY org.eclipse.core.resources 4 2 2014-08-21 01:34:49.559
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalStateException: Registry Directory not available: C:\Users\cgarza\Documents\GitHub\Algorithms\Workspace\.metadata\.plugins\org.eclipse.pde.core\.p2\org.eclipse.equinox.p2.engine\profileRegistry.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.restore(SimpleProfileRegistry.java:419)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileMap(SimpleProfileRegistry.java:277)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfiles(SimpleProfileRegistry.java:259)
+	at org.eclipse.pde.internal.core.target.P2TargetUtils.cleanOrphanedTargetDefinitionProfiles(P2TargetUtils.java:167)
+	at org.eclipse.pde.internal.core.PDECore$1.saving(PDECore.java:274)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:383)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:192)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:195)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1130)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 2 2 2014-08-21 01:34:49.671
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 566 2014-08-21 01:34:49.671
+!MESSAGE Problems occurred during save.
+!STACK 0
+java.lang.IllegalStateException: Registry Directory not available: C:\Users\cgarza\Documents\GitHub\Algorithms\Workspace\.metadata\.plugins\org.eclipse.pde.core\.p2\org.eclipse.equinox.p2.engine\profileRegistry.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.restore(SimpleProfileRegistry.java:419)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileMap(SimpleProfileRegistry.java:277)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfiles(SimpleProfileRegistry.java:259)
+	at org.eclipse.pde.internal.core.target.P2TargetUtils.cleanOrphanedTargetDefinitionProfiles(P2TargetUtils.java:167)
+	at org.eclipse.pde.internal.core.PDECore$1.saving(PDECore.java:274)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:383)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:192)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:195)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1130)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

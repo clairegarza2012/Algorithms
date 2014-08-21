@@ -7,8 +7,8 @@ public class HuffmanTree {
 
 	private FrequencyNode root;
 	//private PriorityQueue<FrequencyNode> frequencies = new PriorityQueue<FrequencyNode>();
-	//private HeapBasedPriorityQueue<FrequencyNode> frequencies = new HeapBasedPriorityQueue<FrequencyNode>();
-	private AvlBasedPriorityQueue<FrequencyNode> frequencies = new AvlBasedPriorityQueue<FrequencyNode>();
+	private HeapBasedPriorityQueue<FrequencyNode> frequencies = new HeapBasedPriorityQueue<FrequencyNode>();
+	//private AvlBasedPriorityQueue<FrequencyNode> frequencies = new AvlBasedPriorityQueue<FrequencyNode>();
 
 	public HuffmanTree(byte[] b) {
 
