@@ -29,7 +29,7 @@ public class AVLTree<T extends Comparable<T>> {
 			insertNode(root, node);
 		}
 		this.balanceTree(root, null);
-		//this.balancer(root, null, true);
+		this.balancer(root, null, true);
 
 		return true;
 	}
@@ -73,11 +73,11 @@ public class AVLTree<T extends Comparable<T>> {
 			return;
 		}
 
-		int leftHeight = 0;
+		int leftHeight = 1;
 		if (root.getLeft() != null){
 			leftHeight = this.height(root.getLeft());
 		}
-		int rightHeight = 0;
+		int rightHeight = -1;
 		if (root.getRight() != null){
 			rightHeight = this.height(root.getRight());
 		}
@@ -86,13 +86,13 @@ public class AVLTree<T extends Comparable<T>> {
 		root.setHeight(this.height(root));
 		
 		balanceTree(root.getLeft(), root);
-		this.balanceHelper(root, parent, true);
+		//this.balanceHelper(root, parent, true);
 
-		leftHeight = 0;
+		leftHeight = 1;
 		if (root.getLeft() != null){
 			leftHeight = this.height(root.getLeft());
 		}
-		rightHeight = 0;
+		rightHeight = -1;
 		if (root.getRight() != null){
 			rightHeight = this.height(root.getRight());
 		}
@@ -101,7 +101,7 @@ public class AVLTree<T extends Comparable<T>> {
 		root.setHeight(this.height(root));
 
 		balanceTree(root.getRight(), root);
-		this.balanceHelper(root, parent, false);
+		//this.balanceHelper(root, parent, false);
 	}
 
 	private void balancer(AVLNode<T> root, AVLNode<T> parent, boolean goLeft){
@@ -112,11 +112,11 @@ public class AVLTree<T extends Comparable<T>> {
 			return;
 		}
 		
-		int leftHeight = 0;
+		int leftHeight = 1;
 		if (root.getLeft() != null){
 			leftHeight = this.height(root.getLeft());
 		}
-		int rightHeight = 0;
+		int rightHeight = -1;
 		if (root.getRight() != null){
 			rightHeight = this.height(root.getRight());
 		}
@@ -127,11 +127,11 @@ public class AVLTree<T extends Comparable<T>> {
 		balancer(root.getLeft(), root, true);
 		balanceHelper(root, parent, goLeft);
 
-		leftHeight = 0;
+		leftHeight = 1;
 		if (root.getLeft() != null){
 			leftHeight = this.height(root.getLeft());
 		}
-		rightHeight = 0;
+		rightHeight = -1;
 		if (root.getRight() != null){
 			rightHeight = this.height(root.getRight());
 		}

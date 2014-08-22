@@ -29,7 +29,7 @@ public class AVLTree<T extends Comparable<T>> {
 			insertNode(root, node);
 		}
 		this.balanceTree(root, null);
-		//this.balancer(root, null, true);
+		this.balancer(root, null, true);
 
 		return true;
 	}
@@ -86,7 +86,7 @@ public class AVLTree<T extends Comparable<T>> {
 		root.setHeight(this.height(root));
 		
 		balanceTree(root.getLeft(), root);
-		this.balanceHelper(root, parent, true);
+		//this.balanceHelper(root, parent, true);
 
 		leftHeight = 0;
 		if (root.getLeft() != null){
@@ -101,7 +101,7 @@ public class AVLTree<T extends Comparable<T>> {
 		root.setHeight(this.height(root));
 
 		balanceTree(root.getRight(), root);
-		this.balanceHelper(root, parent, false);
+		//this.balanceHelper(root, parent, false);
 	}
 
 	private void balancer(AVLNode<T> root, AVLNode<T> parent, boolean goLeft){
