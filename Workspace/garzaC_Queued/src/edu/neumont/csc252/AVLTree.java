@@ -28,8 +28,8 @@ public class AVLTree<T extends Comparable<T>> {
 		else {
 			insertNode(root, node);
 		}
+		
 		this.balanceTree(root, null);
-		//this.balancer(root, null, true);
 
 		return true;
 	}
@@ -67,211 +67,100 @@ public class AVLTree<T extends Comparable<T>> {
 		if (root == null){
 			return;
 		}
-		if (root.getLeft() == null && root.getRight() == null){
-			root.setHeight(0);
-			root.setBalanceFactor(0);
-			return;
-		}
 
-		int leftHeight = 0;
-		if (root.getLeft() != null){
-			leftHeight = this.height(root.getLeft());
-		}
-		int rightHeight = 0;
-		if (root.getRight() != null){
-			rightHeight = this.height(root.getRight());
-		}
-		int balanceFactor = leftHeight - rightHeight;
-		root.setBalanceFactor(balanceFactor);
-		root.setHeight(this.height(root));
-		
 		balanceTree(root.getLeft(), root);
-		this.balanceHelper(root, parent, true);
-
-		leftHeight = 0;
-		if (root.getLeft() != null){
-			leftHeight = this.height(root.getLeft());
-		}
-		rightHeight = 0;
-		if (root.getRight() != null){
-			rightHeight = this.height(root.getRight());
-		}
-		balanceFactor = leftHeight - rightHeight;
-		root.setBalanceFactor(balanceFactor);
-		root.setHeight(this.height(root));
-
 		balanceTree(root.getRight(), root);
-		this.balanceHelper(root, parent, false);
-	}
-
-	private void balancer(AVLNode<T> root, AVLNode<T> parent, boolean goLeft){
-		if (root == null){
-			return;
-		}
-		if (root.getLeft() == null && root.getRight() == null){
-			return;
-		}
 		
 		int leftHeight = 0;
-		if (root.getLeft() != null){
-			leftHeight = this.height(root.getLeft());
-		}
 		int rightHeight = 0;
-		if (root.getRight() != null){
-			rightHeight = this.height(root.getRight());
-		}
-		int balanceFactor = leftHeight - rightHeight;
-		root.setBalanceFactor(balanceFactor);
-		root.setHeight(this.height(root));
-
-		balancer(root.getLeft(), root, true);
-		balanceHelper(root, parent, goLeft);
-
-		leftHeight = 0;
+		
 		if (root.getLeft() != null){
 			leftHeight = this.height(root.getLeft());
 		}
-		rightHeight = 0;
 		if (root.getRight() != null){
 			rightHeight = this.height(root.getRight());
 		}
-		balanceFactor = leftHeight - rightHeight;
-		root.setBalanceFactor(balanceFactor);
-		root.setHeight(this.height(root));
 		
-		balancer(root.getRight(), root, false);
-		balanceHelper(root, parent, goLeft);
+		int balanceFactor = leftHeight - rightHeight;
+		
+		if (balanceFactor >= 2 || balanceFactor <= -2){
+			this.balance(root, parent);
+		}
 	}
 
-	private void balanceHelper(AVLNode<T> root, AVLNode<T> parent, boolean goLeft){
+	private void balance(AVLNode<T> node, AVLNode<T> parent){
+	
+		if (this.height(node.getLeft()) - this.height(node.getRight()) > 0){
 
-		if (root.getBalanceFactor() >= 2){
-
-			if (root.getLeft().getBalanceFactor() == -1){
-
-				AVLNode<T> leftSub = root.getLeft().getRight();
-				AVLNode<T> rightSub = root.getLeft();
-				AVLNode<T> prevRoot = root;
-
-				if (leftSub.getLeft() != null)
-					rightSub.setRight(leftSub.getLeft());
-				else
-					rightSub.setRight(null);
-				if (leftSub.getRight() != null)
-					prevRoot.setLeft(leftSub.getRight());
-				else
-					prevRoot.setLeft(null);
-
-				if (parent == null){
-					this.root = leftSub;
-					this.root.setLeft(rightSub);
-					this.root.setRight(prevRoot);
-				}
-				else{
-					root = leftSub;
-					root.setLeft(rightSub);
-					root.setRight(prevRoot);
-
-					if (goLeft){
-						parent.setLeft(root);
-					}else{
-						parent.setRight(root);
-					}
-				}
+			if (this.height(node.getLeft().getLeft()) - this.height(node.getLeft().getRight()) < 0){
+				rotateLeft(node.getLeft(), parent);
+				rotateRight(node, parent);
+				System.out.println("I'm getting called");
 			}
-			else if (root.getLeft().getBalanceFactor() == 1 || root.getLeft().getBalanceFactor() == 0){
-
-				AVLNode<T> leftSub = root.getLeft();
-				AVLNode<T> prevRoot = root;
-
-				if (root.getLeft().getRight() != null)
-					prevRoot.setLeft(root.getLeft().getRight());
-				else{
-					prevRoot.setLeft(null);
-				}
-				if (parent == null){
-					this.root = leftSub;
-					this.root.setRight(prevRoot);
-				}
-				else{
-					root = leftSub;
-					root.setRight(prevRoot);
-
-					if (goLeft){
-						parent.setLeft(root);
-					}
-					else{
-						parent.setRight(root);
-					}
-				}
-			}
-		}
-		else if (root.getBalanceFactor() <= -2){
-
-			if (root.getRight().getBalanceFactor() == -1 || root.getRight().getBalanceFactor() == 0){
-
-				AVLNode<T> leftSub = root.getRight();
-				AVLNode<T> prevRoot = root;
-
-				if (leftSub.getLeft() != null){
-					prevRoot.setRight(leftSub.getLeft());
-				}else{
-					prevRoot.setRight(null);
-				}
-
-				if (parent == null){
-					this.root = leftSub;
-					this.root.setLeft(prevRoot);
-				}
-				else{
-					root = leftSub;
-					root.setLeft(prevRoot);
-
-					if (goLeft){
-						parent.setLeft(root);
-					}else{
-						parent.setRight(root);
-					}
-				}
-
-			}
-			else if (root.getRight().getBalanceFactor() == 1){
-
-				AVLNode<T> leftSub = root.getRight().getLeft();
-				AVLNode<T> rightSub = root.getRight();
-				AVLNode<T> prevRoot = root;
-
-				if (leftSub.getLeft() != null){
-					prevRoot.setRight(leftSub.getLeft());
-				}else{
-					prevRoot.setRight(null);
-				}
-				if (leftSub.getRight() != null)
-					rightSub.setLeft(leftSub.getRight());
-				else{
-					rightSub.setLeft(null);
-				}
-
-				if (parent == null){
-					this.root = leftSub;
-					this.root.setLeft(prevRoot);
-					this.root.setRight(rightSub);
-				}
-				else{
-					root = leftSub;
-					root.setLeft(prevRoot);
-					root.setRight(rightSub);
-
-					if (goLeft){
-						parent.setLeft(root);
-					}else{
-						parent.setRight(root);
-					}
-				}
-
+			else{
+				rotateRight(node, parent);
 			}
 		}
 
+		else{
+			if (this.height(node.getRight().getLeft()) - this.height(node.getRight().getRight()) > 0){
+				rotateRight(node.getRight(), parent);
+				rotateLeft(node, parent);
+			}
+			else{
+				rotateLeft(node, parent);
+			}
+		}
+	}
+	
+	private void rotateRight(AVLNode<T> node, AVLNode<T> parent){
+
+		AVLNode<T> pivot = node.getLeft();
+
+		if (parent != null){
+			if (parent.getRight() == node){
+				parent.setRight(pivot);
+			}
+			else{
+				parent.setLeft(pivot);
+			}
+		}
+
+		//if (leftSub.getRight() != null)
+		node.setLeft(pivot.getRight());
+		pivot.setRight(node);
+		//		else{
+		//			node.setLeft(null);
+		//		}
+
+		if (parent == null){
+			root = pivot;
+		}
+	}
+
+	private void rotateLeft(AVLNode<T> node, AVLNode<T> parent){
+
+		AVLNode<T> pivot = node.getRight();
+
+		if (parent != null){
+			if (parent.getRight()== node){
+				parent.setRight(pivot);
+			}
+			else{
+				parent.setLeft(pivot);
+			}
+		}
+
+		//if (leftSub.getRight() != null)
+		node.setRight(pivot.getLeft());
+		pivot.setLeft(node);
+		//		else{
+		//			node.setLeft(null);
+		//		}
+
+		if (parent == null){
+			root = pivot;
+		}
 	}
 
 	public T delete(){
@@ -282,7 +171,7 @@ public class AVLTree<T extends Comparable<T>> {
 
 		T temp = deleteHelper(root, null, this.getSmallest()).getValue();
 		this.balanceTree(root, null);
-		this.balancer(root, null, true);
+		//this.balancer(root, null, true);
 
 		return temp;
 	}

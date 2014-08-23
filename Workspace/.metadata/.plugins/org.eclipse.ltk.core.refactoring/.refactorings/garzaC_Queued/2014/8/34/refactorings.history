@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;leftSub&apos; in &apos;edu.neumont.csc252.AVLTree.rotateRight(...)&apos; to &apos;pivot&apos;&#x0D;&#x0A;- Original project: &apos;garzaC_Queued&apos;&#x0D;&#x0A;- Original element: &apos;edu.neumont.csc252.AVLTree.rotateRight(AVLNode&lt;T&gt;, AVLNode&lt;T&gt;).leftSub&apos;&#x0D;&#x0A;- Renamed element: &apos;leftSub&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;leftSub&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;edu.neumont.csc252{AVLTree.java[AVLTree~rotateRight~QAVLNode\&lt;QT;&gt;;~QAVLNode\&lt;QT;&gt;;@leftSub!2369!2404!2380!2386!QAVLNode\&lt;QT;&gt;;!0!false" name="pivot" references="true" stamp="1408732634096" version="1.0"/>
+</session>
