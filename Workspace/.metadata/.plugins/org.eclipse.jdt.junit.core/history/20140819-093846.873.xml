@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="HuffmanTreeTest" project="garzaC_Zipped" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="edu.neumont.csc252.test.HuffmanTreeTest" time="0.005">
-    <testcase name="test1" classname="edu.neumont.csc252.test.HuffmanTreeTest" time="0.004"/>
-    <testcase name="testCompress" classname="edu.neumont.csc252.test.HuffmanTreeTest" time="0.001"/>
-  </testsuite>
-</testrun>
