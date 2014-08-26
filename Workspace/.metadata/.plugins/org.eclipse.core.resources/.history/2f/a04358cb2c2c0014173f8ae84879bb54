@@ -1,6 +1,9 @@
 package edu.neumont.csc252.test;
 
+import static org.junit.Assert.*;
+
 import java.util.List;
+
 import edu.neumont.csc252.BfsGraphTraversal;
 import edu.neumont.csc252.Graph;
 
