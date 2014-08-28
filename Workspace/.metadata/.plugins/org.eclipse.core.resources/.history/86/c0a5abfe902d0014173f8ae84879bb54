@@ -1,0 +1,30 @@
+package edu.neumont.csc252.test;
+
+import java.util.List;
+import edu.neumont.csc252.BfsGraphTraversal;
+import edu.neumont.csc252.Graph;
+
+public class Test {
+
+	@org.junit.Test
+	public void test() {
+
+		Graph g = new Graph(5);
+		g.addEdge(0, 1, 0);
+		g.addEdge(1, 2, 0);
+		//g.addEdge(1, 3, 0);
+		//g.addEdge(2, 4, 0);
+		g.addEdge(2, 3, 0);
+		g.addEdge(3, 4, 0);
+
+		BfsGraphTraversal bfs = new BfsGraphTraversal();
+		List<List<Integer>> list = bfs.traverse(g);
+
+		for (List<Integer> li : list){
+			for (Integer i : li){
+				System.out.println(i);
+			}
+		}
+	}
+
+}

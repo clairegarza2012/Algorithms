@@ -3,44 +3,65 @@ package edu.neumont.csc252;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BfsGraphTraversal {
 
 	public List<List<Integer>> traverse(Graph g){
 
-		List<List<Integer>> list = new ArrayList<List<Integer>>();
+		List<List<Integer>> list = new ArrayList<>();
 
-		List<Integer> queue = new ArrayList<>();
+	
 
-		for (int v = 0; v < g.vcount(); v++){// gets each vertex
-			System.out.print(v + " ==> ");
-			//queue.add(v);
-			for (int w = 0; w < g.vcount(); w++){
-				if (g.isEdge(v, w)){
-					queue.add(w);
-					System.out.print(w + ", ");
-				}
-			}
-			
-			List<Integer> quee = new ArrayList<>();
-			quee.addAll(queue);
-			boolean a = list.add(quee);
-
-			System.out.println(a);
-//			while (queue.peek() != null){
-//				System.out.print(queue.poll() + ", ");
-//			}
-			queue.clear();
-			System.out.println();
+		Queue<Integer> queue = new LinkedList<Integer>();
+		int v;
+		for (v=0; v < g.vcount(); v++) {
+			g.setMark(v, 0);
 		}
 
+		while (allMarked(g) != -1) {
+			List<Integer> tree = new ArrayList<Integer>();
+			queue.add(allMarked(g));
+			while (queue.size() > 0){
+				v = queue.poll();
+				if(tree.size() == 0)
+				{
+					tree.add(v);
+					g.setMark(v,1);
+				}
+
+
+				for (int w = g.first(v); w < g.vcount(); w = g.next(v, w)) {
+
+					if (g.getMark(w) == 0){
+						g.setMark(w, 1);
+						queue.add(w);
+						tree.add(w);
+					}
+				}
+
+			}
+			list.add(tree);
+		}
 		return list;
 	}
-	
-	private List<List<Integer>> BsfHelper(){
+
+
+	private int allMarked(Graph g){
 		
+		int value = -1;
 		
-		return null;
+		for (int i = 0; i < g.vcount() && value == -1; i++) {
+			value = (g.getMark(i) == 0)?i:value;
+		}
+		
+		return value;
 	}
-	
+
+
+
+
+
+
+
 }

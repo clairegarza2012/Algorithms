@@ -1,0 +1,63 @@
+package edu.neumont.csc252;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class BfsGraphTraversal {
+
+	public List<List<Integer>> traverse(Graph g){
+
+		List<List<Integer>> list = new ArrayList<List<Integer>>();
+
+		List<Integer> queue = new ArrayList<>();
+
+		for (int v = 0; v < g.vcount(); v++){// gets each vertex
+			//System.out.print(v + " ==> ");
+			//queue.add(v);
+			int w = g.first(v);
+
+			while (w < g.vcount()) {
+
+//				if (queue.contains(w)){
+//					queue.add(w);
+//					w = g.vcount();
+//				}
+//				else {
+					queue.add(w);
+					w = g.next(v, w);
+				//}
+			}
+
+			List<Integer> quee = new ArrayList<>();
+			quee.addAll(queue);
+
+			list.add(quee);
+			queue.clear();
+			//quee.clear();
+		}
+
+		return list;
+	}
+
+	private List<List<Integer>> bfsHelper(Graph g, int v, int w){
+		
+		if (w < g.vcount()){
+			return null;
+		}
+		
+		return null;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

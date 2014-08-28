@@ -1,0 +1,42 @@
+package edu.neumont.csc252.test;
+
+import java.util.List;
+import edu.neumont.csc252.BfsGraphTraversal;
+import edu.neumont.csc252.DfsGraphTraversal;
+import edu.neumont.csc252.DotsAndBoxes;
+import edu.neumont.csc252.Graph;
+
+public class Test {
+
+	@org.junit.Test
+	public void test() {
+
+//		Graph g = new Graph(7);
+//		g.addEdge(0, 1, 1);
+//		//g.addEdge(1, 2, 1);
+//		g.addEdge(1, 3, 1);
+//		g.addEdge(0, 2, 1);
+//		//g.addEdge(2, 4, 1);
+//		g.addEdge(2, 3, 1);
+//		g.addEdge(3, 4, 1);
+//		g.addEdge(5, 6, 1);
+//
+//		BfsGraphTraversal bfs = new BfsGraphTraversal();
+//		List<List<Integer>> list = bfs.traverse(g);
+//
+//		int count = 0;
+//		for (List<Integer> li : list){
+//			System.out.print(count++ + ": ");
+//			for (Integer i : li){
+//				System.out.print(i + ", ");
+//			}
+//			System.out.println();
+//		}
+		
+		DotsAndBoxes dab = new DotsAndBoxes(4, 4);
+		
+		dab.drawLine(1, x1, y1, x2, y2)
+		
+	}
+
+}

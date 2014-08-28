@@ -1,5 +1,7 @@
 package edu.neumont.csc252;
 
+import java.util.Arrays;
+
 public class Graph {
 
 	int[][] graph;
@@ -13,15 +15,15 @@ public class Graph {
 	
 	public int vcount(){
 		// returns number of vertices (whether connected or not) in the graph
-		return graph.length;
+		return colors.length;
 	}
 	
 	public int ecount(){
 		// returns the number of edges in the graph
 		int count = 0;
 		
-		for (int i = 0; i < graph.length; i++){
-			for (int j = i; j < graph.length; j++){
+		for (int i = 0; i < colors.length; i++){
+			for (int j = i; j < colors.length; j++){
 				if (graph[i][j] > 0){
 					count ++;
 				}
@@ -32,48 +34,43 @@ public class Graph {
 	}
 	
 	public int first(int v){
-		// returns the first vertex (in natural order) connected to vertex v.  If there are none, then vcount() is returned
-		for (int i = 0; i < graph.length; i++){
-			if (graph[v][i] > 0){
-				return graph[v][i];
-			}
-		}
-		
-		return graph.length;
+		return next(v, -1);
 	}
 	
 	public int next(int v, int w){
 		// returns the vertex (in natural order) connected to vertex v after vertex w.  If there are no more edges after w, vcount() is returned
-		for (int i = w + 1; i < graph.length; i++){
+		for (int i = w + 1; i < colors.length; i++){
 			if (graph[v][i] > 0){
-				return graph[v][i];
+				return i;
 			}
 		}
 		
-		return graph.length;
+		return colors.length;
 	}
 	
 	public void addEdge(int v, int w, int wt){
 		// adds an edge between vertex v and vertex w.
-		graph[v][w] = wt;		
+		graph[v][w] = wt;	
+		graph[w][v] = wt;
 	}
 
 	public void removeEdge(int v, int w){
 		// removes edge between vertex v and vertex w.
 		graph[v][w] = 0;
+		graph[w][v] = 0;
 	}
 	
 	public boolean isEdge(int v, int w){
 		// returns whether there is a connection between vertex v and vertex w
-		return graph[v][w] != 0;
+		return graph[v][w] != 0 || graph[w][v] != 0;
 	}
 	
 	public int degree(int v){
 		// returns how many edges depart from vertex v
 		int count = 0;
 		
-		for (int i = 0; i < graph.length; i++){
-			if (graph[v][i] >= 0){
+		for (int i = 0; i < colors.length; i++){
+			if (graph[v][i] != 0){
 				count++;
 			}
 		}
@@ -96,4 +93,55 @@ public class Graph {
 			colors[i] = 0;
 		}
 	}
+
+	@Override
+	public String toString() {
+		String s = "";
+		
+		for (int i = 0; i < this.vcount(); i++){
+			
+			for (int j = 0; j < this.vcount(); j++){
+								
+				if (this.isEdge(i, j)){
+					System.out.print("1.");
+				}
+				else {
+					System.out.print("0.");
+				}
+			}
+			System.out.println();
+		}			
+		
+		return s;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
