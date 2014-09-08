@@ -41,5 +41,13 @@
 <fullyQualifiedTypeName name="java.nio.file.Paths"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="edu.neumont.csc252.DotsAndBoxes"/>
+<fullyQualifiedTypeName name="edu.neumont.csc252.BfsGraphTraversal"/>
+<fullyQualifiedTypeName name="edu.neumont.csc252.DfsGraphTraversal"/>
+<fullyQualifiedTypeName name="edu.neumont.csc252.TopologicalSort"/>
+<fullyQualifiedTypeName name="edu.neumont.csc252.Graph"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="edu.neumont.ui.Picture"/>
+<fullyQualifiedTypeName name="edu.neumont.csc252.SeamCarver"/>
 </qualifiedTypeNameHistroy>

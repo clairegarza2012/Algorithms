@@ -11,8 +11,6 @@ public class BfsGraphTraversal {
 
 		List<List<Integer>> list = new ArrayList<>();
 
-	
-
 		Queue<Integer> queue = new LinkedList<Integer>();
 		int v;
 		for (v=0; v < g.vcount(); v++) {
@@ -57,11 +55,6 @@ public class BfsGraphTraversal {
 		
 		return value;
 	}
-
-
-
-
-
 
 
 }
