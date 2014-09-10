@@ -14,7 +14,7 @@ public class Soundex {
 	 * #1. Make a better, more uniform hashcode (1 point)
 	 */
 	public int hashCode() {
-		return ((soundex.charAt(0)) * 1000 + 
+		return ((soundex.charAt(0) - 'a') * 1000 + 
 				(soundex.charAt(1) - '0') * 100 +
 				(soundex.charAt(2) - '0') * 10 +
 				(soundex.charAt(3) - '0') );

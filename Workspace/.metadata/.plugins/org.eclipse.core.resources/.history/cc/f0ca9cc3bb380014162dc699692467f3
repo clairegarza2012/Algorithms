@@ -3,7 +3,7 @@
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.Hashtable;
+//import java.util.Hashtable;
 
 public class SoundexWordPreparer implements WordPreparer, WordComparer {
 	private Hashtable<Soundex, Set<Word>> wordsBySoundex = new Hashtable<Soundex, Set<Word>>(26000);
