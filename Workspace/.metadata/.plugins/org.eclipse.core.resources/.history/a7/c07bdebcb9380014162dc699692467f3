@@ -20,7 +20,7 @@ public class Hashtable<K, V> {
 	 */
 	public void put(K key, V value) {
 
-		int hash = Math.abs(key.hashCode() % values.length);
+		int hash = key.hashCode() % values.length;
 		Entry<K, V> bob = values[hash];
 
 		if (bob == null){
@@ -47,7 +47,7 @@ public class Hashtable<K, V> {
 	 */
 	public V get(K key) {
 
-		int hash = Math.abs(key.hashCode() % values.length);
+		int hash = key.hashCode() % values.length;
 
 		if (values[hash] == null){
 			return null;
@@ -78,7 +78,7 @@ public class Hashtable<K, V> {
 	 */
 	public V remove(K key) {
 
-		int hash = Math.abs(key.hashCode() % values.length);
+		int hash = key.hashCode() % values.length;
 
 		if(values[hash] == null){
 			return null;
