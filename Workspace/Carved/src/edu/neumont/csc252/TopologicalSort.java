@@ -7,6 +7,8 @@ public class TopologicalSort {
 
 	public List<Integer> sort(Graph g){
 		
+		
+		
 		// Do a dfs traversal
 		List<List<Integer>> list = this.traverse(g);
 		List<Integer> dfs = list.get(0);

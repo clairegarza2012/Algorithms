@@ -1,0 +1,166 @@
+
+
+import java.util.Iterator;
+//import java.util.function.Consumer;
+
+
+public class Hashtable<K, V> {
+	private Entry<K,V>[] values;
+	private int size;
+
+	public Hashtable(int initialCapacity) {
+		values = (Entry<K,V>[])new Entry[initialCapacity];
+	}
+
+	/**
+	 * #3b. Implement this (1 point)
+	 * 
+	 * @param key
+	 * @param value
+	 */
+	public void put(K key, V value) {
+
+		int hash = key.hashCode() % values.length;
+		Entry<K, V> bob = values[hash];
+
+		if (bob == null){
+			Entry<K, V> newEntry = new Entry<K, V>(key, value); 
+			values[hash] = newEntry;
+			size++;
+		}
+		else{
+			Entry<K, V> current = values[hash];
+
+			while (current != null && !current.key.equals(key)){
+				current = current.next;
+			}
+
+			values[hash].data = value;
+		}
+
+	}
+
+	/**
+	 * #3b. Implement this (1 point)
+	 * @param key
+	 * @return
+	 */
+	public V get(K key) {
+
+		int hash = key.hashCode() % values.length;
+
+		if (values[hash] == null){
+			return null;
+		}
+		
+		if (values[hash].key == key){
+			return values[hash].data;
+		}
+
+		Entry<K, V> current = values[hash];
+
+		while (current != key){
+
+			if (current == null){
+				return null;
+			}
+			current = current.next;
+		}
+
+		return current.data;
+	}
+
+	/**
+	 * #3c.  Implement this. (1 point)
+	 * 
+	 * @param key
+	 * @return
+	 */
+	public V remove(K key) {
+
+		int hash = key.hashCode() % values.length;
+
+		if(values[hash] == null){
+			return null;
+		}
+		
+		if (values[hash].key == key){
+			Entry<K, V> temp = values[hash];
+			values[hash] = null;
+			size--;
+			return temp.data;
+		}
+
+		Entry<K, V> current = values[hash];
+
+		while (current != key){
+
+			if (current == null){
+				return null;
+			}
+			current = current.next;
+		}
+
+		values[hash] = null;
+		return current.data;
+
+	}
+
+	public int size() {
+		return size;
+	}
+
+	public boolean containsKey(K key) {
+		return this.get(key) != null; 
+	}
+
+	public Iterator<V> values() {
+		return new Iterator<V>() {
+			private int count = 0;
+			private Entry<K, V> currentEntry;
+
+			{
+				while ( ( currentEntry = values[count] ) == null && count < values.length ) {
+					count++;
+				}
+			}
+
+			//			@Override
+			//			public void forEachRemaining(Consumer<? super V> arg0) {
+			//			}
+
+			@Override
+			public boolean hasNext() {
+				return count < values.length;
+			}
+
+			@Override
+			public V next() {
+				V toReturn = currentEntry.data;
+				currentEntry = currentEntry.next;
+				while ( currentEntry == null && ++count < values.length && (currentEntry = values[count]) == null );
+				return toReturn;
+			}
+
+			@Override
+			public void remove() {
+			}
+
+		};
+	}
+
+	private static class Entry<K, V> {
+		private K key;
+		private V data;
+		private Entry<K,V> next;
+
+		public Entry(K key, V data) {
+			this.key = key;
+			this.data = data;
+		}
+
+		public String toString() {
+			return "{" + key + "=" + data + "}";
+		}
+	}
+}
