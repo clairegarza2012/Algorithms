@@ -1,0 +1,21 @@
+package edu.neumont.csc250;
+
+public class recursionTwo {
+
+	public static void main(String[] args){
+		
+		int n = 7;
+		int value = fibinacci(n);
+		
+		System.out.println(value);
+	}
+	
+	private static int fibinacci(int n){
+		
+		if (n < 2){
+			return n;
+		}
+		
+		return fibinacci(n-1) + fibinacci(n - 2);
+	}
+}

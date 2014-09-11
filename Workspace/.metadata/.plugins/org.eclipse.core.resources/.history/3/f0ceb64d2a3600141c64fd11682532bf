@@ -1,0 +1,39 @@
+package edu.neumont.csc252;
+
+public class Node {
+
+	private int parent;
+	private double weight;
+	private double energy;
+	private int index;
+	
+	public Node(double energy, int index){
+		this.energy = energy;
+		this.index = index;
+	}
+
+	public int getParent() {
+		return parent;
+	}
+
+	public void setParent(int parent) {
+		this.parent = parent;
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+	
+	public double getEnergy(){
+		return this.energy;
+	}
+	
+	public int getIndex(){
+		return index;
+	}
+	
+}

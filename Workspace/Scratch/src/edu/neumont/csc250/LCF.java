@@ -4,8 +4,8 @@ public class LCF {
 
 	public static void main(String[] args){
 		
-		int a = 100000000;
-		int b = 150500500;
+		int a = 178;
+		int b = 275;
 		
 		int resultIt = findLCFIterative(a, b);
 		int resultRec = findLCFRecursive(a, b); 
@@ -49,7 +49,7 @@ public class LCF {
 			b = a;
 			a = temp;
 		}
-		
+		System.out.println("a: " + a + " b: " + b);
 		if(a % b == 0 || a == b){
 			return b;
 		}
