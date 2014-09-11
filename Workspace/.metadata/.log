@@ -3433,3 +3433,13 @@ Contains: File already exists on disk: C:\Users\cgarza\Documents\GitHub\Algorith
 !MESSAGE Problems encountered while moving resources.
 !SUBENTRY 3 org.eclipse.core.filesystem 4 268 2014-09-02 15:56:01.896
 !MESSAGE File already exists on disk: C:\Users\cgarza\Documents\GitHub\Algorithms\Workspace\garzaC_Boxed\src\edu\neumont\csc252\test\Test.java.
+!SESSION 2014-09-11 10:28:22.254 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.7.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-09-11 10:28:28.925
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
